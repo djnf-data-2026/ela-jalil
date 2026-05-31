@@ -1,13 +1,13 @@
 ---
 title: "Government Spending Master DJNF"
-author: "Wells"
+author: "Wells" 
 date: "2026-05-26"
 output: html_document
 editor_options: 
   markdown: 
     wrap: sentence
 ---
-
+Ela Jalil
 # Who is getting federal bucks in my state?
 
 For your project, you will examine federal spending in your state and county for the 2020-2024 fiscal years.
