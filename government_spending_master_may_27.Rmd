@@ -186,7 +186,7 @@ biden_final <- spending %>%
   summarise(total_spending = sum(spending_total, na.rm = TRUE)) %>%
   arrange(desc(total_spending))
 #Department of Health and Human Services spent the most - could this be explained by COVID? 1,851,928,863,603 - there is a 300 billion dollar increase
-
+#Many of the agencies were the same 
 #https://www.usaspending.gov/recipient - was poking around and thought that this was interesting 
 
 ```
