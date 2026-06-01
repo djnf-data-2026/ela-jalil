@@ -5,4 +5,6 @@ date: "2026-06-01"
 output: html_document
 ---
 
-# Story Pitch
+# Story Idea
+
+I would like to look into the differences between the Trump administration and the Biden administration in regards to federal spending. I have already started analyzing the differences between the two, focusing on the years 2020 and 2024. I found that the Department of Health and Human Services spent the most money, which makes sense because both of these administrations were heavily affected by the COVID-19 pandemic. I may put this agency to the side in my analysis, and look at the other agencies that spent the most during each administration to see any differences. Once I hone in on an agency, I want to look at spending across the years, and also by state/county. With a data set like this, it is important to find a larger trend, but then also narrow it so that the audience is able to conceptualize the finding. Because the Washington Post is doing less local coverage, I will still keep this with a mostly national angle, and mostly focus on the agency itself.

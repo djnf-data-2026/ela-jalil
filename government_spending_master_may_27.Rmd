@@ -153,6 +153,44 @@ To download this data, see the download icon in the black toolbar
 
 ### Practice queries
 
+Differences across administrations For your state, compare the last year of Trump’s first administration (2020) to the last year of the Biden administration (2021) How did spending differ overall?
+Was one administration spending way more/less than another?
+Was one administration pouring more/less into specific agencies than the other administration?
+
+```{r}
+#Trump - 2021, or 2020 because it's the last full year
+#Biden - 2025, or 2024 because it's the last full year 
+
+# Aggregate total spending per year
+spending_by_year <- aggregate(spending_total ~ fyear, data = spending, FUN = sum)
+
+# Sort by year
+spending_by_year <- spending_by_year[order(spending_by_year$fyear), ]
+
+# Print the result
+print(spending_by_year)
+
+#2020 = 4,246,216,763,125
+#2024 = 4,902,206,088,550 - there is almost a 700 billion dollar difference between 2020 and 2024
+#Now I'm going to look into which agency recieved the most money under the Trump administration and the Biden administration
+trump_final <- spending %>% 
+  filter(fyear == 2020) %>% 
+  group_by(agency) %>%
+  summarise(total_spending = sum(spending_total, na.rm = TRUE)) %>%
+  arrange(desc(total_spending))
+#Department of Health and Human Services spent the most - 1,560,445,841,005 - I would like to see where this mostly went
+
+biden_final <- spending %>% 
+  filter(fyear == 2024) %>% 
+  group_by(agency) %>%
+  summarise(total_spending = sum(spending_total, na.rm = TRUE)) %>%
+  arrange(desc(total_spending))
+#Department of Health and Human Services spent the most - could this be explained by COVID? 1,851,928,863,603 - there is a 300 billion dollar increase
+
+#https://www.usaspending.gov/recipient - was poking around and thought that this was interesting 
+
+```
+
 Law enforcement /defense spending by state.
 Examine the trend from 2020-2024 for your state.
 Has that changed over time?
@@ -180,12 +218,3 @@ Understand there are flaws with county-level data Compare to law enforcement
 
 ```
 
-Differences across administrations For your state, compare the last year of Trump’s first administration (2020) to the last year of the Biden administration (2021) How did spending differ overall?
-Was one administration spending way more/less than another?
-Was one administration pouring more/less into specific agencies than the other administration?
-
-```{r}
-
-
-
-```
