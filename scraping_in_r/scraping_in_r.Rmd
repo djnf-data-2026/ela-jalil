@@ -11,8 +11,8 @@ Installing some of the libraries we'll need:
 # install.packages("tidyverse")
 # install.packages("lubridate")
 # install.packages("janitor")
-# install.packages("rvest")
-# install.packages("pdftools")
+ install.packages("rvest")
+ install.packages("pdftools")
 ```
 
 Loading some of the others:
@@ -33,9 +33,9 @@ B) If you have a Mac, you'll first need to install Homebrew (click on Homebrew.p
 After you've completed one of the above steps... the rplaywright library that we'll be using isn't on CRAN, so we'll need to install it slightly differently:
 
 ```{r}
-# install.packages("pak")
-# pak::pak("erikaris/rplaywright")
-# rplaywright::install_rplaywright()
+install.packages("pak")
+pak::pak("erikaris/rplaywright")
+rplaywright::install_rplaywright()
 ```
 
 Great! Now you're ready to roll.
@@ -108,6 +108,7 @@ results <- courts_url |>
 
 # display the html below
 results
+#EJ - turns into a nested list; nested within the list is the head and the body
 ```
 
 In our environment window at right, you’ll see results as a “list of 2”.
@@ -137,6 +138,7 @@ results <- courts_url |>
 # show the dataframe
 
 results
+#EJ- results turns into a tibble, and has 14 responses 
 ```
 
 In the environment window at right, look at results Note that it’s now a “list of 14”.
@@ -153,7 +155,7 @@ results_2026 <- results[[1]]
 # show the dataframe
 
 results_2026
-
+#This put the data and the title of the news release
 ```
 
 Awesome! 
@@ -226,7 +228,7 @@ https://www.courts.state.md.us/media/news/2026/pr20260514
 It looks like we'll need to extract and combine the text from all of the <p> nodes.
 
 ```{r}
-press_release_url_example <- table_2026_w_urls$url[2]
+press_release_url_example <- table_2026_w_urls$url[1]
 
 press_release_result <- read_html(press_release_url_example)
 
