@@ -7,7 +7,7 @@ editor_options:
   markdown: 
     wrap: sentence
 ---
-Ela Jalil
+Author: Ela Jalil
 # Who is getting federal bucks in my state?
 
 For your project, you will examine federal spending in your state and county for the 2020-2024 fiscal years.
@@ -57,6 +57,8 @@ library(janitor)
 
 spending <- read_csv("https://raw.githubusercontent.com/djnf-data-2026/master/refs/heads/main/data/federal_spending_by_county_2020%202024%20rob_0416_v2.csv") |> 
      clean_names()
+#can sort by years, agency, state_nm, cty_name, contracts, grants, direct payments, spending totals
+#Check the difference between grants and contracts
 
 ```
 
@@ -77,12 +79,13 @@ group_by(agency) |>
   arrange(desc(total_spent))
 
 view(totals)
+#is n the amount of times that it's named in the data set?
 ```
 
 ## Spending by state, FY2020-2024
 
 ```{r}
-spending |> 
+state_spending <- spending |> 
 group_by(state_nm) |> 
   summarize(
     n = n(),
@@ -96,7 +99,7 @@ group_by(state_nm) |>
 ## Spending by county, FY2020-2024
 
 ```{r}
-spending |> 
+county_spending <- spending |> 
 group_by(cty_name, state_nm) |> 
   summarize(
      total_spent = sum(spending_total, na.rm = TRUE),
@@ -104,6 +107,7 @@ group_by(cty_name, state_nm) |>
   ) |> 
    mutate(`total_spent_$` = scales::dollar(total_spent / 1e9, suffix = "B", accuracy = 0.01)) |> 
   arrange(desc(total_spent))
+#unfortunately a good amount of NA values so may be hard to specify
 
 ```
 
@@ -120,6 +124,7 @@ spending |>
   ) |> 
    mutate(`total_spent_$` = scales::dollar(total_spent / 1e9, suffix = "B", accuracy = 0.01)) |> 
   arrange(desc(total_spent))
+#is teh
 ```
 
 ## Highlight specific city and agency, FY2020-2024
@@ -142,6 +147,7 @@ To drill down into specific spending by county, we now go to [USASpending.gov](h
 - Search!
 
 The web page serves up a form with spending by specific company in that county per year.
+#Can maybe see if a company has repeatedly shown up
 **Gold mine!** Make sure this is the search you want.
 To download this data, see the download icon in the black toolbar
 
@@ -151,13 +157,14 @@ Law enforcement /defense spending by state.
 Examine the trend from 2020-2024 for your state.
 Has that changed over time?
 How does your state compare to others?
-Using the USAspending.gov website, name the top five companies by this category by state Which counties are the winners?
+Using the USAspending.gov website, name the top five companies by this category by state 
+Which counties are the winners?
 Understand there are flaws with county-level data
 
 ```{r}
+#comparing end of Biden admin to now, look at agencies that have changed, look within the agencies which states recieved more or cut out; look from Biden to Trump and what changed; states and agencies; Look more nationally 
 
-
-
+#DOD, DHS, DOJ
 ```
 
 Social services spending by county.
