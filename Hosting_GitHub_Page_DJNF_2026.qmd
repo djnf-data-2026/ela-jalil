@@ -53,24 +53,109 @@ I am planning on looking at each defense company over each year of the presidenc
 
 ## More information
 
-I still need to complete my state and county analysis, and deeper analysis on each contractor. If I was trying to figure out the
+I still need to complete my state and county analysis, and deeper analysis on each contractor. If I was trying to see if there were lifestyle changes in the counties with increases or decreases in funding, I would look at GDP data by county/state to see if there were any differences.
 
-```{r eval=FALSE, include=TRUE}
+Creating an API key that can pull the defense contractors and amount in 2020
 
-# You will write your code in chunks but not execute the data. Use {r eval=FALSE, include=TRUE} in the header so the page will render without running the actual code.
-income_vacancy %>% 
-  ggplot(aes(x = community)) +
-  geom_point(aes(y=income_2020), color = "#64D197", stroke=5) +
-  geom_point(aes(y=vacant_2020*1000), stroke=5, color = "#FB8AE3") +
-  scale_y_continuous(
-    name = "2020 Income (Green)", limits=c(0, 62000), labels=scales::dollar_format(),
-    sec.axis = sec_axis(~./60000, name="2020 Percent Vacancies (Red)", labels = scales::percent))+
-  #scale_y_continuous(labels = scales::percent) +
-  labs(
-    title = "Income and Vacancies of Baltimore Neighborhoods 2020",
-    x = "Community",
-    caption = "source: BNIA Data - By: Parker Leipzig and Rob Wells"
-  )
+```{r}
+library(httr)
+library(jsonlite)
+library(dplyr)
+
+
+body <- list(
+  filters = list(
+    time_period = list(
+      list(
+        start_date = "2019-10-01",
+        end_date   = "2020-09-30"
+      )
+    ),
+    agencies = list(
+      list(
+        type = "awarding",
+        tier = "toptier",
+        name = "Department of Defense"
+      )
+    )
+  ),
+  limit = 10,
+  page = 1
+)
+
+response <- POST(
+  "https://api.usaspending.gov/api/v2/search/spending_by_category/recipient/",
+  body = body,
+  encode = "json"
+)
+
+data <- fromJSON(
+  content(response, "text", encoding = "UTF-8"),
+  flatten = TRUE
+)
+
+top10_2020 <- data$results %>%
+  select(
+    contractor = name,
+    uei,
+    obligations = amount
+  ) %>%
+  arrange(desc(obligations))
+
+print(top10_2020)
+#Both parent and children corporations were showing up in these results - which I think could still be accurate because they both receive funding. My main concern is just making sure that they are not repeating the amounts. 
+#Lockheed Martin received 39,981,831,442 in 2020, and that does not include the child corporation amount
+```
+Doing the same thing again for 2024
+```{r}
+library(httr)
+library(jsonlite)
+library(dplyr)
+
+
+body <- list(
+  filters = list(
+    time_period = list(
+      list(
+        start_date = "2023-10-01",
+        end_date   = "2024-09-30"
+      )
+    ),
+    agencies = list(
+      list(
+        type = "awarding",
+        tier = "toptier",
+        name = "Department of Defense"
+      )
+    )
+  ),
+  limit = 10,
+  page = 1
+)
+
+response <- POST(
+  "https://api.usaspending.gov/api/v2/search/spending_by_category/recipient/",
+  body = body,
+  encode = "json"
+)
+
+data <- fromJSON(
+  content(response, "text", encoding = "UTF-8"),
+  flatten = TRUE
+)
+
+top10_2024 <- data$results %>%
+  select(
+    contractor = name,
+    uei,
+    obligations = amount
+  ) %>%
+  arrange(desc(obligations))
+
+print(top10_2024)
+#Both parent and children corporations were showing up in these results - which I think could still be accurate because they both receive funding. My main concern is just making sure that they are not repeating the amounts. 
+#Lockheed Martin received 14,357,199,730 - less than half of what they received under the Trump administration 
+#Boeing Company was up higher, but still received less money; Humana recieved more money - but that is also the health care for the military 
 ```
 
 ## Set up for hosting
