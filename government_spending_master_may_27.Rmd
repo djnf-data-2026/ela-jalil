@@ -325,3 +325,12 @@ trump_biden_spending <- trump_dod_spending %>%
   inner_join(biden_dod_spending, by="state_nm")
 write.csv(trump_biden_spending,"~/Downloads/trump_biden_spending.csv", row.names = FALSE)
 ```
+
+DOD Total Spending
+
+```{r}
+dod_years <- spending %>% 
+  filter(agency == "Department of Defense") %>% 
+  summarise(total_spending = sum(spending_total, na.rm = TRUE)) %>%
+  arrange(desc(total_spending))
+```
