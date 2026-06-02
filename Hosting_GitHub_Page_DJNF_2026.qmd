@@ -1,64 +1,41 @@
 ---
 title: "Hosting a GitHub Page"
-author: "Rob Wells"
-date: "5-29-2026"
+author: "Ela Jalil"
+date: "6-01-2026"
 format:
   html:
     theme: cosmo
 ---
 
-# Hosting a GitHub Page - R Cheat Sheet
+email: ejalil\@terpmail.umd.edu phone: 240-801-0906
 
-This exercise will allow you to create a basic web page which will be required for the Investigate Your Community final project option.
+\# Hosting a GitHub Page - R Cheat Sheet
 
-For this exercise, you will create a page with your one paragraph story idea. You will then host it on your GitHub page.
+# Story Pitch Rough Draft
 
+## Summary of Pitch
 
-## Styled Text
+Donald Trump’s first presidency introduced an increase in defense contracting that came at the expense of domestic programs, while former President Biden claimed that he would not decrease defense spending during his time in office, according to a 2022 Guardian article. 
 
-At the core, QMD files are text files, and they allow you to use a very lightweight "markup" language to style text, similar to html, but much less fussy. 
+But under the Biden administration, Lockheed Martin — the defense contractor that was awarded the most money from the government in 2020 and 2024 —  received 25.6 billion less dollars. 
 
-Outside of the codeblocks (the gray sections where we write code), we can style any text using standard markdown styling. 
+In my story, I would like to track the difference in defense contract spending within the Trump and Biden administration. 
 
-This is a nice guide to styling text with markdown: [Markdown guide ](https://quarto.org/docs/authoring/markdown-basics.html)
+## Modern day Relevance
 
-We can create headings similar to html's h1 to h6 with hashtags.  
+Although there is largely centrist bipartisan support for defense spending, it would be interesting to see how each president interacted with defense companies. I would want to look into the CEOs of each company and who they decided to throw their support behind in the 2020 and then the 2024 election. This could explain Trump's current interaction with defense contracting.
 
-##### This is an h5
+## Target Audience
 
-We can create links, like this: [google](https://google.com)
+I would likely be targeting an audience that is interested either positively or negatively about decreases in defense spending. 
 
-We can **bold** or *italic* text. 
+## People I would interview
 
-We can create bulleted lists.  
+1.  Ryan Bradel - He is a partner at the Ward and Berry, a D.C law firm that specializes in government contracting. He's represented multiple defense contracting, and so he would be able to give an expert opinion on how to navigate the information.
+2.  Reach out to press contacts for the defense contracting that I am covering so that they have a chance for comment on the amount of government spending they receive.
+3.  I would reach out to the DOW, and Pete Hegseth's team for comment on how the department allocates spending towards contractors.
 
-* bullet one
-* bullet two
-* bullet three
-
-## Code blocks
-
-We can also add special code inside of code blocks -- the gray sections where we write code -- that control how they render in our html document.  These output options let us do things like:
-
-* Show or hide the code when we render our html document  (echo: true or false)
-* Prevent the code from actually running when we render our html document (eval: true or false)
-* Hide warnings from outputing when we render our html document (warning: true or false)
-
-There's a [full guide here](https://quarto.org/docs/computations/execution-options.html#output-options).
-
-The code below, for example, will output the text inside the print statement when rendered to html, but the actual code -- the print() function -- will be hidden.
-
-## Create your website
-
-In place of these instructions, you will paste your project one paragraph story idea into this document and any code you've developed so far.
-
-You will need to load libraries and data because rendering a page requires a full R session to execute on the code.
-
-First, create H1 headers 
-
-**For example:** 
-
-# Income and Vacancies of Baltimore Neighborhoods 2020
+# 
 
 ## Looking at wealth inequality in Charm City
 
@@ -80,79 +57,80 @@ income_vacancy %>%
   )
 ```
 
+## Set up for hosting
 
-## Set up for hosting  
+-   Create a new folder in your repository called "docs" (if one isn't there already)
+-   Rename this document as "index.qmd"
+-   Move "index.qmd" into the "docs" folder
 
- * Create a new folder in your repository called "docs" (if one isn't there already)
- * Rename this document as "index.qmd"
- * Move "index.qmd" into the "docs" folder
-      
+## Render this document as an html page
 
-## Render this document as an html page       
- 
- * Make sure this document is named "index.qmd" and is in the "docs" folder
- * Click Render button. It will create an html version of this page, called "index.html" 
- * Use GitHub Desktop to push your files to your your github repository on the web. 
- * Access the URL from your Github repository. 
+-   Make sure this document is named "index.qmd" and is in the "docs" folder
+-   Click Render button. It will create an html version of this page, called "index.html"
+-   Use GitHub Desktop to push your files to your your github repository on the web.
+-   Access the URL from your Github repository.
 
-## Host html on GitHub    
+## Host html on GitHub
 
- * Go to your github repository on the web, such as https://github.com/djnf-data-2026/casey-mann
- * Click on Settings on the top right. 
- * Scroll down to the Pages section of Settings. 
- * Change the Branch to /docs and click save.
-  
-  
-#### To see your file hosted:  
+-   Go to your github repository on the web, such as https://github.com/djnf-data-2026/casey-mann
+-   Click on Settings on the top right.
+-   Scroll down to the Pages section of Settings.
+-   Change the Branch to /docs and click save.
 
-* Back to your GitHub repo on the web: such as https://github.com/djnf-data-2026/casey-mann
-* Click on Settings, then Pages
-* Under GitHub Pages, you should see "Your site is live at https://djnf-data-2026.github.io/casey-mann/"
-* Click that URL
-* If it works, email it to robwells@umd.edu
-      
+#### To see your file hosted:
 
-## REVEL IN YOUR NERD POWERS  
+-   Back to your GitHub repo on the web: such as https://github.com/djnf-data-2026/casey-mann
+-   Click on Settings, then Pages
+-   Under GitHub Pages, you should see "Your site is live at https://djnf-data-2026.github.io/casey-mann/"
+-   Click that URL
+-   If it works, email it to robwells\@umd.edu
 
-# Part 2: Embedding Images  
+## REVEL IN YOUR NERD POWERS
 
-* create a folder in your repository's main branch, call it images
+# Part 2: Embedding Images
 
-* find any .jpeg, .jpg or .png file and insert it into that folder.
+-   create a folder in your repository's main branch, call it images
 
-* In a QMD file, display the image as follows:
+-   find any .jpeg, .jpg or .png file and insert it into that folder.
 
-#![CAPTION FOR YOUR PHOTO](images/your_link_here.png)
+-   In a QMD file, display the image as follows:
 
-#![CHATTER FOR YOUR chart](images/xl-refresher-grid_SHEETS.png)
+\#![CAPTION FOR YOUR PHOTO](images/your_link_here.png)
 
+\#![CHATTER FOR YOUR chart](images/xl-refresher-grid_SHEETS.png)
 
 A more advanced technique controlling the width and height
 
-#![Read the Screen](images/xl-refresher-SHEETS_screen.png){width="100%"}
-
+\#![Read the Screen](images/xl-refresher-SHEETS_screen.png){width="100%"}
 
 ### Embedding code
 
 From a **Datawrapper Map**
 
-<iframe title="Small Business Reporting, Spring 2024" aria-label="Map" id="datawrapper-chart-z4bny" src="https://datawrapper.dwcdn.net/z4bny/5/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+<iframe title="Small Business Reporting, Spring 2024" aria-label="Map" id="datawrapper-chart-z4bny" src="https://datawrapper.dwcdn.net/z4bny/5/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500" data-external="1">
+
+</iframe>
+
+```{=html}
+<script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
 </script>
-
-
+```
 ## Embedding video
 
 ### Deep Nerd Video
 
-
 ::: {#first_steps}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TNP_unReOpw?si=CQC3cG49TShkoJOG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TNP_unReOpw?si=CQC3cG49TShkoJOG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
 :::
 
 ::: {#second_steps}
 ### A great lecture on structural racism in journalism
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DIDHbEZYFSc?si=a-KNzlQgoGjXD6VV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DIDHbEZYFSc?si=a-KNzlQgoGjXD6VV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
 :::
 
 **Now replace these two videos with something you selected.**
@@ -160,6 +138,7 @@ From a **Datawrapper Map**
 The embed code is in the video share feature
 
 ## Instructions to embed a gif
+
 ```{r text_to_columns.gif, out.width="100%", echo=FALSE}
 ### Embed a GIF
 #First, download a GIF (extension will be .gif) and load it into "images" folder
@@ -167,8 +146,6 @@ The embed code is in the video share feature
 
 ```
 
-
-This is a very basic starter but it will get you to the finish line on Saturday.
-Good luck!
+This is a very basic starter but it will get you to the finish line on Saturday. Good luck!
 
 --30--
