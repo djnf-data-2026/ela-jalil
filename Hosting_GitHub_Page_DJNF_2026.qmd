@@ -35,7 +35,17 @@ I would likely be targeting an audience that is interested either positively or 
 2.  Reach out to press contacts for the defense contracting that I am covering so that they have a chance for comment on the amount of government spending they receive.
 3.  I would reach out to the DOW, and Pete Hegseth's team for comment on how the department allocates spending towards contractors.
 
-# 
+## Potential impact
+
+Because I am going to look at where the funding for the defense contractors are going to be allocated by state and county, I will be able to see the impact that defense contractors have in local communities. Beyond the bipartisan separation on defense spending, it would also be interesting to see if there would be any impacts on jobs when defense spending is cut.
+
+## Interesting aspects of the story
+
+Although I have had limited time with the data I pulled, I was already able to see the differences in spending between the Trump and Biden administration. I think that the fact that multiple child corporations of Lockheed Martin show up in the top ten highest obligations indicates that there are only a couple of defense contractors that hold a large amount of power in the US. I also thought it was interesting that one of the only contractors that received more money under the Biden administration was the organization dedicated to defense healthcare. This shows a difference in priorities between the two administrations.
+
+## Visuals
+
+I am planning on looking at each defense company over each year of the presidency, so I will be doing a line chart for those. I also plan on doing a bar chart which lists the amount of money given to each defense company. When I do a state analysis I plan on creating a map.
 
 ## Looking at wealth inequality in Charm City
 
