@@ -124,7 +124,6 @@ spending |>
   ) |> 
    mutate(`total_spent_$` = scales::dollar(total_spent / 1e9, suffix = "B", accuracy = 0.01)) |> 
   arrange(desc(total_spent))
-#is teh
 ```
 
 ## Highlight specific city and agency, FY2020-2024
@@ -294,35 +293,8 @@ print(top10_2024)
 #Boeing Company was up higher, but still received less money; Humana recieved more money - but that is also the health care for the military 
 ```
 
-Creating a scraper for the recipient section
 
 #Could maybe look at something related to organizations that were cut because of DEI?
 Need to think of the significant events - what orgs started recieving more money
 
 Aggregate year and state - which contractors in the states were the biggest deal; contractors were
-
-Law enforcement /defense spending by state.
-Examine the trend from 2020-2024 for your state.
-Has that changed over time?
-How does your state compare to others?
-Using the USAspending.gov website, name the top five companies by this category by state Which counties are the winners?
-Understand there are flaws with county-level data
-
-```{r}
-#comparing end of Biden admin to now, look at agencies that have changed, look within the agencies which states recieved more or cut out; look from Biden to Trump and what changed; states and agencies; Look more nationally 
-
-#DOD, DHS, DOJ
-```
-
-Social services spending by county.
-Examine the trend from 2020-2024 for your state.
-Has that changed over time?
-How does your state compare to others?
-Using the USAspending.gov website, name the top five companies by this category by state Which counties are the winners?
-Understand there are flaws with county-level data Compare to law enforcement
-
-```{r}
-
-
-
-```
