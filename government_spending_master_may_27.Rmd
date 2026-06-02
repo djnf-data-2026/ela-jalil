@@ -188,6 +188,9 @@ biden_final <- spending %>%
 #Many of the agencies were the same 
 #https://www.usaspending.gov/recipient - was poking around and thought that this was interesting 
 
+#Focusing specifically on the end of the Biden administration: 452,977,991,240 - was number three in spending
+#Trump - 429,713,829,316 - was number three for Trump as well, Biden spent 23 billion more over his presidency 
+
 ```
 
 Creating an API key that can pull the defense contractors and amount in 2020
@@ -241,7 +244,9 @@ print(top10_2020)
 #Both parent and children corporations were showing up in these results - which I think could still be accurate because they both receive funding. My main concern is just making sure that they are not repeating the amounts. 
 #Lockheed Martin received 39,981,831,442 in 2020, and that does not include the child corporation amount
 ```
+
 Doing the same thing again for 2024
+
 ```{r}
 library(httr)
 library(jsonlite)
@@ -293,8 +298,30 @@ print(top10_2024)
 #Boeing Company was up higher, but still received less money; Humana recieved more money - but that is also the health care for the military 
 ```
 
+Now I am trying to do a state analysis on the data
 
-#Could maybe look at something related to organizations that were cut because of DEI?
-Need to think of the significant events - what orgs started recieving more money
+```{r}
+trump_dod_spending <- spending %>% 
+  filter(agency == "Department of Defense", fyear=="2020") %>% 
+  group_by(state_nm) %>% 
+  summarize(spending_total = sum(spending_total, na.rm = TRUE)) %>% 
+  rename(trump_spending = spending_total)
+#The NA values could be attributed to national spending likely - but ask Rob
+```
 
-Aggregate year and state - which contractors in the states were the biggest deal; contractors were
+```{r}
+biden_dod_spending <- spending %>% 
+  filter(agency == "Department of Defense", fyear=="2024") %>% 
+  group_by(state_nm) %>% 
+  summarize(spending_total = sum(spending_total, na.rm = TRUE)) %>% 
+  rename(biden_spending = spending_total)
+  
+```
+
+Join these two data sets together
+
+```{r}
+trump_biden_spending <- trump_dod_spending %>%
+  inner_join(biden_dod_spending, by="state_nm")
+write.csv(trump_biden_spending,"~/Downloads/trump_biden_spending.csv", row.names = FALSE)
+```
