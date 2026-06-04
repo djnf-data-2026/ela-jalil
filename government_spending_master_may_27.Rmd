@@ -384,3 +384,7 @@ state_spending_2024 <- data$results %>%
 
 print(state_spending_2024)
 ```
+
+```{r}
+write.csv(dod_years,"~/Downloads/dod_years.csv", row.names = FALSE)
+```

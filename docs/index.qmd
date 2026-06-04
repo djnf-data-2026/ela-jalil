@@ -7,25 +7,35 @@ format:
     theme: spacelab
 ---
 
-email: ejalil\@terpmail.umd.edu phone: 240-801-0906
+# Black Hawks, tanks and submarines, oh my!
 
-# Defense spending grew under Biden, but defense contracting did not
+![](images/djnf.png)
 
-PUT AN IMAGE HERE - MAYBE ONE THAT I CREATED, IF NOT SOME OTHER PICTURE
+A compilation of defense contractor products. Image created by Ela Jalil.
+
+## Defense spending grew under Biden, but defense contracting did not.
 
 ## [What's going on?]{.underline}
 
 Donald Trump’s first presidency introduced an increase in defense contracting that came at the expense of domestic programs. Although change was expected with the election of former president Joe Biden, he stated that he would not decrease spending during his time in office.
 
-Biden kept his promise, increasing the Department of Defense spending by ()%.
+Biden kept his promise, increasing the Department of Defense spending by 5.4% between 2020 and 2024.
 
-But under the Biden administration, Lockheed Martin — the defense contractor that was awarded the most money from the government in 2020 and 2024 —  less than half of what it received under the Trump administration. 
+<iframe src="https://flo.uri.sh/visualisation/29243692/embed" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:600px;" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
 
-In my story, I would like to track the difference in defense contract spending within the Trump and Biden administration. 
+</iframe>
+
+But under the Biden administration, Lockheed Martin — the defense contractor that was awarded the most money from the government in 2020 and 2024 —  recieved less than half of what it was awarded under the Trump administration. 
+
+```{r }
+
+```
+
+This story will analyze the difference in defense contract spending by the first term Trump administration and the Biden administration. In this pitch I will identify the ten defense contractors that received the most money from each administration, and analyze the differences between the two. I will then look at the distribution of obligations across the country, and compare this to the overall Department of Defense spending. I will also look closer into the products that
 
 ## Modern day Relevance
 
-Although there is largely centrist bipartisan support for defense spending, it would be interesting to see how each president interacted with defense companies. I would want to look into the CEOs of each company and who they decided to throw their support behind in the 2020 and then the 2024 election. This could explain Trump's current interaction with defense contracting.
+In April, the AP reported that Trump wanted to increase defense spending to \$1.5 trillion, around a 44% increase. This expansion is at the expense at domestic programs, which will experience a 10% cut. Trump has justified this spending due to the continued conflict with Iran, and need for security against global threats.
 
 ## Target Audience
 
@@ -169,69 +179,6 @@ print(top10_2024)
 #Boeing Company was up higher, but still received less money; Humana recieved more money - but that is also the health care for the military 
 ```
 
-## Set up for hosting
+## Contact me:
 
--   Create a new folder in your repository called "docs" (if one isn't there already)
--   Rename this document as "index.qmd"
--   Move "index.qmd" into the "docs" folder
-
-## Render this document as an html page
-
--   Make sure this document is named "index.qmd" and is in the "docs" folder
--   Click Render button. It will create an html version of this page, called "index.html"
--   Use GitHub Desktop to push your files to your your github repository on the web.
--   Access the URL from your Github repository.
-
-## Host html on GitHub
-
--   Go to your github repository on the web, such as https://github.com/djnf-data-2026/casey-mann
--   Click on Settings on the top right.
--   Scroll down to the Pages section of Settings.
--   Change the Branch to /docs and click save.
-
-#### To see your file hosted:
-
--   Back to your GitHub repo on the web: such as https://github.com/djnf-data-2026/casey-mann
--   Click on Settings, then Pages
--   Under GitHub Pages, you should see "Your site is live at https://djnf-data-2026.github.io/casey-mann/"
--   Click that URL
--   If it works, email it to robwells\@umd.edu
-
-## REVEL IN YOUR NERD POWERS
-
-# Part 2: Embedding Images
-
--   create a folder in your repository's main branch, call it images
-
--   find any .jpeg, .jpg or .png file and insert it into that folder.
-
--   In a QMD file, display the image as follows:
-
-\#![CAPTION FOR YOUR PHOTO](images/your_link_here.png)
-
-\#![CHATTER FOR YOUR chart](images/xl-refresher-grid_SHEETS.png)
-
-A more advanced technique controlling the width and height
-
-\#![Read the Screen](images/xl-refresher-SHEETS_screen.png){width="100%"}
-
-### Embedding code
-
-From a **Datawrapper Map**
-
-**Now replace these two videos with something you selected.**
-
-The embed code is in the video share feature
-
-## Instructions to embed a gif
-
-```{r text_to_columns.gif, out.width="100%", echo=FALSE}
-### Embed a GIF
-#First, download a GIF (extension will be .gif) and load it into "images" folder
-#if (knitr::is_html_output()) knitr::include_graphics("images/text_to_columns.gif")  
-
-```
-
-This is a very basic starter but it will get you to the finish line on Saturday. Good luck!
-
---30--
+email: ejalil\@terpmail.umd.edu phone: 240-801-0906
