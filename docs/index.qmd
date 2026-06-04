@@ -13,7 +13,7 @@ format:
 
 A compilation of defense contractor products. Image created by Ela Jalil.
 
-## Defense spending grew under Biden, but defense contracting did not.
+### Defense spending grew under Biden, but defense contracting did not.
 
 ## [What's going on?]{.underline}
 
@@ -25,58 +25,9 @@ Biden kept his promise, increasing the Department of Defense spending by 5.4% be
 
 </iframe>
 
-But under the Biden administration, Lockheed Martin — the defense contractor that was awarded the most money from the government in 2020 and 2024 —  recieved less than half of what it was awarded under the Trump administration. 
+But under the Biden administration, Lockheed Martin — the defense contractor that was awarded the most money from the government in 2020 and 2024 —  received less than half of what it was awarded under the Trump administration. 
 
-```{r }
-
-```
-
-This story will analyze the difference in defense contract spending by the first term Trump administration and the Biden administration. In this pitch I will identify the ten defense contractors that received the most money from each administration, and analyze the differences between the two. I will then look at the distribution of obligations across the country, and compare this to the overall Department of Defense spending. I will also look closer into the products that
-
-## Modern day Relevance
-
-In April, the AP reported that Trump wanted to increase defense spending to \$1.5 trillion, around a 44% increase. This expansion is at the expense at domestic programs, which will experience a 10% cut. Trump has justified this spending due to the continued conflict with Iran, and need for security against global threats.
-
-## Target Audience
-
-I would likely be targeting an audience that is interested either positively or negatively about decreases in defense spending. 
-
-## People I would interview
-
-1.  Ryan Bradel - He is a partner at the Ward and Berry, a D.C law firm that specializes in government contracting. He's represented multiple defense contracting, and so he would be able to give an expert opinion on how to navigate the information.
-2.  Reach out to press contacts for the defense contracting that I am covering so that they have a chance for comment on the amount of government spending they receive.
-3.  I would reach out to the DOW, and Pete Hegseth's team for comment on how the department allocates spending towards contractors.
-
-## Potential impact
-
-Because I am going to look at where the funding for the defense contractors are going to be allocated by state and county, I will be able to see the impact that defense contractors have in local communities. Beyond the bipartisan separation on defense spending, it would also be interesting to see if there would be any impacts on jobs when defense spending is cut.
-
-<iframe title="Department of Defense spending in 2020 and 2024" aria-label="Choropleth map" id="datawrapper-chart-rzM1T" src="https://datawrapper.dwcdn.net/rzM1T/6/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height data-external="1">
-
-</iframe>
-
-```{=html}
-<script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
-```
-## Interesting aspects of the story
-
-Although I have had limited time with the data I pulled, I was already able to see the differences in spending between the Trump and Biden administration. I think that the fact that multiple child corporations of Lockheed Martin show up in the top ten highest obligations indicates that there are only a couple of defense contractors that hold a large amount of power in the US. I also thought it was interesting that one of the only contractors that received more money under the Biden administration was the organization dedicated to defense healthcare. This shows a difference in priorities between the two administrations.
-
-## Previous coverage
-
-I noticed that a lot of the previous coverage of the story compared the similarity in spending between the final year of the Trump administration and the first year of the Biden administration. I think that it would be also interesting to cover the difference between 2020 and 2021, but also 2021 and 2024 to see if Biden evolved on his defense spending throughout his tenure in office.
-
-## Visuals
-
-I am planning on looking at each defense company over each year of the presidency, so I will be doing a line chart for those. I also plan on doing a bar chart which lists the amount of money given to each defense company. When I do a state analysis I plan on creating a map.
-
-## More information
-
-I still need to complete my state and county analysis, and deeper analysis on each contractor. If I was trying to see if there were lifestyle changes in the counties with increases or decreases in funding, I would look at GDP data by county/state to see if there were any differences.
-
-Creating an API key that can pull the defense contractors and amount in 2020
-
-```{r}
+```{r include=FALSE}
 library(httr)
 library(jsonlite)
 library(dplyr)
@@ -120,20 +71,6 @@ top10_2020 <- data$results %>%
     obligations = amount
   ) %>%
   arrange(desc(obligations))
-
-print(top10_2020)
-#Both parent and children corporations were showing up in these results - which I think could still be accurate because they both receive funding. My main concern is just making sure that they are not repeating the amounts. 
-#Lockheed Martin received 39,981,831,442 in 2020, and that does not include the child corporation amount
-```
-
-Doing the same thing again for 2024
-
-```{r}
-library(httr)
-library(jsonlite)
-library(dplyr)
-
-
 body <- list(
   filters = list(
     time_period = list(
@@ -172,12 +109,72 @@ top10_2024 <- data$results %>%
     obligations = amount
   ) %>%
   arrange(desc(obligations))
-
-print(top10_2024)
-#Both parent and children corporations were showing up in these results - which I think could still be accurate because they both receive funding. My main concern is just making sure that they are not repeating the amounts. 
-#Lockheed Martin received 14,357,199,730 - less than half of what they received under the Trump administration 
-#Boeing Company was up higher, but still received less money; Humana recieved more money - but that is also the health care for the military 
 ```
+
+### 2020
+
+```{r echo=FALSE}
+print(top10_2020)
+```
+
+### 2024
+
+```{r echo=FALSE}
+print(top10_2024)
+```
+
+This story will analyze the difference in defense contract spending by the first term Trump administration and the Biden administration. In this pitch I will identify the ten defense contractors that received the most money from each administration, and analyze the differences between the two. I will then look at the distribution of obligations across the country, and compare this to the overall Department of Defense spending. I will also look closer into the products that the defense companies are making.
+
+## Modern day Relevance
+
+In April, the AP reported that Trump wanted to increase defense spending to \$1.5 trillion, around a 44% increase. This expansion is at the expense at domestic programs, which will experience a 10% cut. Trump has justified this spending due to the continued conflict with Iran, and need for security against global threats. To understand this, it is important to understand how defense spending has been ramping up since Trump's first time in office, and something that was continued by Biden. This indicates bipartisan support for defense spending, a preference that would be interesting to compare to the broader American population.
+
+## Company analysis
+
+The company that I am mainly focusing on in this project is Lockheed Martin. It has 123,000 employees as of December 31, 2025. The four business segments that Lockheed Martin works in is aeronautics, missiles and fire control, rotary and mission systems and space. The CEO is named Jim Taiclet.
+
+![](images/lockheed.jpg){width="191"}
+
+## Target Audience
+
+My audience would be Americans that care about how the government is allocating defense spending.
+
+## People I would interview
+
+1.  Ryan Bradel - He is a partner at the Ward and Berry, a D.C law firm that specializes in government contracting. He's represented multiple defense contracting, and so he would be able to give an expert opinion on how to navigate the information.
+2.  Reach out to press contacts for the defense contracting that I am covering so that they have a chance for comment on the amount of government spending they receive.
+3.  I would reach out to the Department of War, and Pete Hegseth's team for comment on how the department allocates spending towards contractors.
+
+## Potential impact
+
+Because I am going to look at where the funding for the defense contractors are going to be allocated by state and county, I will be able to see the impact that defense contractors have in local communities. Beyond the bipartisan separation on defense spending, it would also be interesting to see if there would be any impacts on jobs when defense spending is cut.
+
+<iframe title="Department of Defense spending in 2020 and 2024" aria-label="Choropleth map" id="datawrapper-chart-rzM1T" src="https://datawrapper.dwcdn.net/rzM1T/6/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height data-external="1">
+
+</iframe>
+
+```{=html}
+<script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+```
+## Interesting aspects of the story
+
+Although I have had limited time with the data I pulled, I was already able to see the differences in spending between the Trump and Biden administration. I think that the fact that multiple child corporations of Lockheed Martin show up in the top ten highest obligations indicates that there are only a couple of defense contractors that hold a large amount of power in the US. I also thought it was interesting that one of the only contractors that received more money under the Biden administration was the organization dedicated to defense healthcare. This shows a difference in priorities between the two administrations.
+
+## Previous coverage
+
+I noticed that a lot of the previous coverage of the story compared the similarity in spending between the final year of the Trump administration and the first year of the Biden administration. I think that it would be also interesting to cover the difference between 2020 and 2021, but also 2021 and 2024 to see if Biden evolved on his defense spending throughout his tenure in office.
+
+## Previous aspects of the pitch
+
+### Visuals
+
+I am planning on looking at each defense company over each year of the presidency, so I will be doing a line chart for those. I also plan on doing a bar chart which lists the amount of money given to each defense company. When I do a state analysis I plan on creating a map.
+
+### More information
+
+I still need to complete my state and county analysis, and deeper analysis on each contractor. If I was trying to see if there were lifestyle changes in the counties with increases or decreases in funding, I would look at GDP data by county/state to see if there were any differences.
+
+Creating an API key that can pull the defense contractors and amount in 2020
 
 ## Contact me:
 
