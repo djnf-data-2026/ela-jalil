@@ -1,23 +1,25 @@
 ---
-title: "Hosting a GitHub Page"
+title: "Final Draft of Story Pitch"
 author: "Ela Jalil"
-date: "6-01-2026"
+date: "6-03-2026"
 format:
   html:
-    theme: cosmo
+    theme: spacelab
 ---
 
 email: ejalil\@terpmail.umd.edu phone: 240-801-0906
 
-\# Hosting a GitHub Page - R Cheat Sheet
+# Defense spending grew under Biden, but defense contracting did not
 
-# Story Pitch Rough Draft
+PUT AN IMAGE HERE - MAYBE ONE THAT I CREATED, IF NOT SOME OTHER PICTURE
 
-## Summary of Pitch
+## [What's going on?]{.underline}
 
-Donald Trump’s first presidency introduced an increase in defense contracting that came at the expense of domestic programs, while former President Biden claimed that he would not decrease defense spending during his time in office, according to a 2022 Guardian article. 
+Donald Trump’s first presidency introduced an increase in defense contracting that came at the expense of domestic programs. Although change was expected with the election of former president Joe Biden, he stated that he would not decrease spending during his time in office.
 
-But under the Biden administration, Lockheed Martin — the defense contractor that was awarded the most money from the government in 2020 and 2024 —  received 25.6 billion less dollars. 
+Biden kept his promise, increasing the Department of Defense spending by ()%.
+
+But under the Biden administration, Lockheed Martin — the defense contractor that was awarded the most money from the government in 2020 and 2024 —  less than half of what it received under the Trump administration. 
 
 In my story, I would like to track the difference in defense contract spending within the Trump and Biden administration. 
 
@@ -39,6 +41,13 @@ I would likely be targeting an audience that is interested either positively or 
 
 Because I am going to look at where the funding for the defense contractors are going to be allocated by state and county, I will be able to see the impact that defense contractors have in local communities. Beyond the bipartisan separation on defense spending, it would also be interesting to see if there would be any impacts on jobs when defense spending is cut.
 
+<iframe title="Department of Defense spending in 2020 and 2024" aria-label="Choropleth map" id="datawrapper-chart-rzM1T" src="https://datawrapper.dwcdn.net/rzM1T/6/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height data-external="1">
+
+</iframe>
+
+```{=html}
+<script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+```
 ## Interesting aspects of the story
 
 Although I have had limited time with the data I pulled, I was already able to see the differences in spending between the Trump and Biden administration. I think that the fact that multiple child corporations of Lockheed Martin show up in the top ten highest obligations indicates that there are only a couple of defense contractors that hold a large amount of power in the US. I also thought it was interesting that one of the only contractors that received more money under the Biden administration was the organization dedicated to defense healthcare. This shows a difference in priorities between the two administrations.
@@ -106,7 +115,9 @@ print(top10_2020)
 #Both parent and children corporations were showing up in these results - which I think could still be accurate because they both receive funding. My main concern is just making sure that they are not repeating the amounts. 
 #Lockheed Martin received 39,981,831,442 in 2020, and that does not include the child corporation amount
 ```
+
 Doing the same thing again for 2024
+
 ```{r}
 library(httr)
 library(jsonlite)
@@ -207,32 +218,6 @@ A more advanced technique controlling the width and height
 ### Embedding code
 
 From a **Datawrapper Map**
-
-<iframe title="Small Business Reporting, Spring 2024" aria-label="Map" id="datawrapper-chart-z4bny" src="https://datawrapper.dwcdn.net/z4bny/5/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500" data-external="1">
-
-</iframe>
-
-```{=html}
-<script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-</script>
-```
-## Embedding video
-
-### Deep Nerd Video
-
-::: {#first_steps}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TNP_unReOpw?si=CQC3cG49TShkoJOG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-
-</iframe>
-:::
-
-::: {#second_steps}
-### A great lecture on structural racism in journalism
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DIDHbEZYFSc?si=a-KNzlQgoGjXD6VV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-
-</iframe>
-:::
 
 **Now replace these two videos with something you selected.**
 
