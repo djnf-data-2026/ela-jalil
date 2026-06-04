@@ -133,7 +133,7 @@ In April, the AP reported that Trump wanted to increase defense spending to \$1.
 
 The company that I am mainly focusing on in this project is Lockheed Martin. It has 123,000 employees as of December 31, 2025. The four business segments that Lockheed Martin works in is aeronautics, missiles and fire control, rotary and mission systems and space. The CEO is named Jim Taiclet.
 
-![](images/lockheed.jpg){width="191"}
+![](images/lockheed.jpg){fig-align="center" width="216"}
 
 ## Target Audience
 
