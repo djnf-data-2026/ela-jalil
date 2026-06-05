@@ -118,20 +118,26 @@ top10_2024 <- data$results %>%
 ```
 
 ```{r}
-#| code-fold: true
-#| code-summary: "Code"
+##| code-fold: true
+##| code-summary: "Code"
 updated_defense <- top10_2020 %>%
   inner_join(top10_2024, by="uei") %>% 
   select(-contractor.y) %>% 
   select(-uei) %>% 
-  mutate(spending_difference = (obligations_2020-obligations_2024))
+  mutate(spending_difference = (obligations_2020-obligations_2024)) %>% 
+  rename(contractor = contractor.x)
+write.csv(updated_defense,"~/Downloads/updated_defense.csv", row.names = FALSE)
 ```
 
 ```{r echo=FALSE}
-print(updated_defense)
-#write.csv()
+library(gt)
+updated_defense %>%
+  head() %>%
+  gt() %>%
+  tab_header(title = "Top defense contractors between 2020 and 2024")
 ```
 
+<iframe title="Difference in spending for top defense contractors" aria-label="Grouped Bars" id="datawrapper-chart-ZOu9W" src="https://datawrapper.dwcdn.net/ZOu9W/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
 ::: {.callout-note collapse="true"}
 ## Company Descriptions
 
