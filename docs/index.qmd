@@ -11,8 +11,7 @@ format:
 # Black Hawks, tanks and submarines, oh my!
 
 ![](images/djnf.png)
-
-A compilation of defense contractor products. Image created by Ela Jalil.
+[<span style="font-size: 12px;">A compilation of defense contractor products. Image created by Ela Jalil.</span>]
 
 ### Defense spending grew under Biden, but spending towards the top ten defense contractors did not.
 
@@ -35,7 +34,8 @@ Across the country **lead in to Biden increased spending**
 ```
 But under the Biden administration, Lockheed Martin — the defense contractor that was awarded the most money from the government in 2020 and 2024 —  received less than half of what it was awarded under the Trump administration. 
 
-```{r include=FALSE}
+```{r}
+#| code-fold: true
 library(httr)
 library(jsonlite)
 library(dplyr)
@@ -121,11 +121,13 @@ top10_2024 <- data$results %>%
   rename(obligations_2024 = obligations)
 ```
 
-```{r include=FALSE}
+```{r}
+#| code-fold: true
 updated_defense <- top10_2020 %>%
   inner_join(top10_2024, by="uei") %>% 
   select(-contractor.y) %>% 
-  select(-uei)
+  select(-uei) %>% 
+  mutate(spending_difference = (obligations_2020-obligations_2024))
 ```
 
 ```{r echo=FALSE}
@@ -144,8 +146,7 @@ The company that I am mainly focusing on in this project is Lockheed Martin. It 
 
 ![](images/lockheed.jpg){fig-align="center" width="216"}
 
-Jim Taiclet has been the Lockheed Martin CEO since 2020. (Lockheed Martin)
-
+[<span style="font-size: 12px;">A compilation of defense contractor products. Image created by Ela Jalil. (Lockheed Martin)</span>]
 ## Target Audience
 
 My audience would be Americans that care about how the government is allocating defense spending.

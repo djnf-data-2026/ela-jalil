@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -50,11 +84,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#black-hawks-tanks-and-submarines-oh-my" id="toc-black-hawks-tanks-and-submarines-oh-my" class="nav-link active" data-scroll-target="#black-hawks-tanks-and-submarines-oh-my">Black Hawks, tanks and submarines, oh my!</a>
   <ul class="collapse">
   <li><a href="#defense-spending-grew-under-biden-but-spending-towards-the-top-ten-defense-contractors-did-not." id="toc-defense-spending-grew-under-biden-but-spending-towards-the-top-ten-defense-contractors-did-not." class="nav-link" data-scroll-target="#defense-spending-grew-under-biden-but-spending-towards-the-top-ten-defense-contractors-did-not.">Defense spending grew under Biden, but spending towards the top ten defense contractors did not.</a></li>
-  <li><a href="#whats-going-on" id="toc-whats-going-on" class="nav-link" data-scroll-target="#whats-going-on"><u>What’s going on?</u></a>
-  <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">2020</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2024</a></li>
-  </ul></li>
+  <li><a href="#whats-going-on" id="toc-whats-going-on" class="nav-link" data-scroll-target="#whats-going-on"><u>What’s going on?</u></a></li>
   <li><a href="#modern-day-relevance" id="toc-modern-day-relevance" class="nav-link" data-scroll-target="#modern-day-relevance">Modern day Relevance</a></li>
   <li><a href="#company-analysis" id="toc-company-analysis" class="nav-link" data-scroll-target="#company-analysis">Company analysis</a></li>
   <li><a href="#target-audience" id="toc-target-audience" class="nav-link" data-scroll-target="#target-audience">Target Audience</a></li>
@@ -107,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="black-hawks-tanks-and-submarines-oh-my" class="level1">
 <h1>Black Hawks, tanks and submarines, oh my!</h1>
-<p><img src="images/djnf.png" class="img-fluid"></p>
+<p><img src="images/djnf.png" class="img-fluid"> ![<span style="font-size: 12px;">This is a small custom caption</span>]</p>
 <p>A compilation of defense contractor products. Image created by Ela Jalil.</p>
 <section id="defense-spending-grew-under-biden-but-spending-towards-the-top-ten-defense-contractors-did-not." class="level3">
 <h3 class="anchored" data-anchor-id="defense-spending-grew-under-biden-but-spending-towards-the-top-ten-defense-contractors-did-not.">Defense spending grew under Biden, but spending towards the top ten defense contractors did not.</h3>
@@ -119,48 +149,143 @@ ul.task-list li input[type="checkbox"] {
 <iframe src="https://flo.uri.sh/visualisation/29243692/embed" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:300px;" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
 </iframe>
 <p>Across the country <strong>lead in to Biden increased spending</strong></p>
-<iframe title="Department of Defense spending by state in 2020 and 2024" aria-label="Choropleth map" id="datawrapper-chart-rzM1T" src="https://datawrapper.dwcdn.net/rzM1T/11/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1">
-</iframe>
+<p>&lt;iframe title=“Department of Defense spending in 2020 and 2024” aria-label=“Choropleth map” id=“datawrapper-chart-teGUa” src=“https://datawrapper.dwcdn.net/teGUa/15/” scrolling=“no” frameborder=“0” style=“width: 0; min-width: 100% !important; border: none;” height=“” data-external=“1”&gt;&lt;/iframe&gt;&lt;script type=“text/javascript”&gt;(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();&lt;/script&gt;</p>
 <script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
 <p>But under the Biden administration, Lockheed Martin — the defense contractor that was awarded the most money from the government in 2020 and 2024 —&nbsp; received less than half of what it was awarded under the Trump administration.&nbsp;</p>
-<p><strong>Let’s fix these tables. Get one table, and have the years side by side and the difference in spending as the fourth column. get rid of “uei” column - need to ask for help with this.</strong></p>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">2020</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jsonlite)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>body <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">filters =</span> <span class="fu">list</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">time_period =</span> <span class="fu">list</span>(</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">start_date =</span> <span class="st">"2019-10-01"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">end_date   =</span> <span class="st">"2020-09-30"</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">agencies =</span> <span class="fu">list</span>(</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">"awarding"</span>,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">tier =</span> <span class="st">"toptier"</span>,</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">name =</span> <span class="st">"Department of Defense"</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">limit =</span> <span class="dv">10</span>,</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">page =</span> <span class="dv">1</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>response <span class="ot">&lt;-</span> <span class="fu">POST</span>(</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://api.usaspending.gov/api/v2/search/spending_by_category/recipient/"</span>,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">body =</span> body,</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">encode =</span> <span class="st">"json"</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">fromJSON</span>(</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">content</span>(response, <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>),</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">flatten =</span> <span class="cn">TRUE</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>top10_2020 <span class="ot">&lt;-</span> data<span class="sc">$</span>results <span class="sc">%&gt;%</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">contractor =</span> name,</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    uei,</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">obligations =</span> amount</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(obligations)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">obligations_2020 =</span> obligations)</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>body <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>  <span class="at">filters =</span> <span class="fu">list</span>(</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">time_period =</span> <span class="fu">list</span>(</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>        <span class="at">start_date =</span> <span class="st">"2023-10-01"</span>,</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>        <span class="at">end_date   =</span> <span class="st">"2024-09-30"</span></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">agencies =</span> <span class="fu">list</span>(</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>      <span class="fu">list</span>(</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">"awarding"</span>,</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>        <span class="at">tier =</span> <span class="st">"toptier"</span>,</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>        <span class="at">name =</span> <span class="st">"Department of Defense"</span></span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>  <span class="at">limit =</span> <span class="dv">10</span>,</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>  <span class="at">page =</span> <span class="dv">1</span></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>response <span class="ot">&lt;-</span> <span class="fu">POST</span>(</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://api.usaspending.gov/api/v2/search/spending_by_category/recipient/"</span>,</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>  <span class="at">body =</span> body,</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>  <span class="at">encode =</span> <span class="st">"json"</span></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">fromJSON</span>(</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>  <span class="fu">content</span>(response, <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>),</span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>  <span class="at">flatten =</span> <span class="cn">TRUE</span></span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>top10_2024 <span class="ot">&lt;-</span> data<span class="sc">$</span>results <span class="sc">%&gt;%</span></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>    <span class="at">contractor =</span> name,</span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>    uei,</span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>    <span class="at">obligations =</span> amount</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(obligations)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">obligations_2024 =</span> obligations)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>updated_defense <span class="ot">&lt;-</span> top10_2020 <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(top10_2024, <span class="at">by=</span><span class="st">"uei"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>contractor.y) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>uei) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">spending_difference =</span> (obligations_2020<span class="sc">-</span>obligations_2024))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>                        contractor          uei obligations_2020
-1      LOCKHEED MARTIN CORPORATION G4KDGE4JFFK7      39981831442
-2        ELECTRIC BOAT CORPORATION E7BEKJ4V9528      11628482758
-3      LOCKHEED MARTIN CORPORATION XFJMYSYFJEK4       9520626940
-4               THE BOEING COMPANY JJM4FRDZJDX1       8754738146
-5                 RAYTHEON COMPANY VTEWM5QSE598       7449597277
-6   HUMANA GOVERNMENT BUSINESS INC ZE6ZM6NKSV43       6922421962
-7                  RTX CORPORATION QN1BCFY7JDJ5       5713027804
-8    SIKORSKY AIRCRAFT CORPORATION UTJWTSLMFNG4       4210147991
-9  HUNTINGTON INGALLS INCORPORATED C3NLZNSMU254       4047393693
-10          HUNTINGTON INGALLS INC WMXDDH6HJNA5       3440187475</code></pre>
-</div>
-</div>
-</section>
-<section id="section-1" class="level3">
-<h3 class="anchored" data-anchor-id="section-1">2024</h3>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>                       contractor          uei obligations_2024
-1     LOCKHEED MARTIN CORPORATION G4KDGE4JFFK7      14357199730
-2              THE BOEING COMPANY JJM4FRDZJDX1       8599726195
-3       ELECTRIC BOAT CORPORATION E7BEKJ4V9528       8584959335
-4  HUMANA GOVERNMENT BUSINESS INC ZE6ZM6NKSV43       8029206899
-5                RAYTHEON COMPANY VTEWM5QSE598       7751503696
-6     LOCKHEED MARTIN CORPORATION XFJMYSYFJEK4       7250485020
-7     AMERISOURCEBERGEN DRUG CORP KABZK8W6PQT3       6079643907
-8                 RTX CORPORATION QN1BCFY7JDJ5       5033125001
-9              THE BOEING COMPANY WZWRLY4G3PL8       4969601622
-10    LOCKHEED MARTIN CORPORATION H7PNSVNN5827       4832263311</code></pre>
+<pre><code>                    contractor.x obligations_2020 obligations_2024
+1    LOCKHEED MARTIN CORPORATION      39981831442      14357199730
+2      ELECTRIC BOAT CORPORATION      11628482758       8584959335
+3    LOCKHEED MARTIN CORPORATION       9520626940       7250485020
+4             THE BOEING COMPANY       8754738146       8599726195
+5               RAYTHEON COMPANY       7449597277       7751503696
+6 HUMANA GOVERNMENT BUSINESS INC       6922421962       8029206899
+7                RTX CORPORATION       5713027804       5033125001
+  spending_difference
+1         25624631712
+2          3043523422
+3          2270141920
+4           155011952
+5          -301906419
+6         -1106784938
+7           679902803</code></pre>
 </div>
 </div>
 <p>This story will analyze the difference in defense contract spending by the first term Trump administration and the Biden administration. In this pitch I will identify the ten defense contractors that received the most money from each administration, and analyze the differences between the two. I will then look at the distribution of obligations across the country, and compare this to the overall Department of Defense spending. I will also look closer into the products that the defense companies are making.</p>
-</section>
 </section>
 <section id="modern-day-relevance" class="level2">
 <h2 class="anchored" data-anchor-id="modern-day-relevance">Modern day Relevance</h2>
@@ -174,6 +299,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/lockheed.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="216"></p>
 </figure>
 </div>
+<p>Jim Taiclet has been the Lockheed Martin CEO since 2020. (Lockheed Martin)</p>
 </section>
 <section id="target-audience" class="level2">
 <h2 class="anchored" data-anchor-id="target-audience">Target Audience</h2>
@@ -190,11 +316,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="potential-impact" class="level2">
 <h2 class="anchored" data-anchor-id="potential-impact">Potential impact</h2>
 <p>Because I am going to look at where the funding for the defense contractors are going to be allocated by state and county, I will be able to see the impact that defense contractors have in local communities. Beyond the bipartisan separation on defense spending, it would also be interesting to see if there would be any impacts on jobs when defense spending is cut.</p>
-<p><strong>MOVE THESE MAPS TO THE TOP</strong></p>
-<p><strong>Need to fix the 2020 button on the 2024 map. when i select it, datawrapper renders with a login page and screws up the presentation</strong></p>
-<iframe title="Department of Defense spending in 2020 and 2024" aria-label="Choropleth map" id="datawrapper-chart-rzM1T" src="https://datawrapper.dwcdn.net/rzM1T/6/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1">
-</iframe>
-<script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
 </section>
 <section id="interesting-aspects-of-the-story" class="level2">
 <h2 class="anchored" data-anchor-id="interesting-aspects-of-the-story">Interesting aspects of the story</h2>
