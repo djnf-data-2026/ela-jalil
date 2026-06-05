@@ -388,3 +388,13 @@ print(state_spending_2024)
 ```{r}
 write.csv(dod_years,"~/Downloads/dod_years.csv", row.names = FALSE)
 ```
+
+```{r}
+library(leaflet)
+
+m <- leaflet(data = updated_minority_sb) %>%
+  addTiles() %>%
+  addMarkers(lng = ~longitude, lat = ~latitude, 
+             popup = ~company_name) %>%  # Specify the name of the business as the popup content
+  addControl(html = "<strong>Minority Businesses Location Breakdown</strong><br/>The majority of these businesses are located in the center of Baltimore City<br/><small>Source: Baltimore Business Journal</small><br/><small>Author: Ela Jalil</small>", position = "topright")
+```

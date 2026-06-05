@@ -1,6 +1,7 @@
 ---
 title: "Final Draft of Story Pitch"
 author: "Ela Jalil"
+toc: true
 date: "6-03-2026"
 format:
   html:
@@ -13,22 +14,25 @@ format:
 
 A compilation of defense contractor products. Image created by Ela Jalil.
 
-**this subhead is confusing, the distinction between spending and contracting, and it was not explained clearly in the text. i could cut or revise**
-
-### Defense spending grew under Biden, but defense contracting did not.
+### Defense spending grew under Biden, but spending towards the top ten defense contractors did not.
 
 ## [What's going on?]{.underline}
 
-Donald Trump’s first presidency introduced an increase in defense **SPENDING** ~~contracting~~ that came at the expense of domestic programs. Although change was expected with the election of former president Joe Biden, he stated that he would not decrease spending during his time in office.
+Donald Trump’s first presidency introduced an increase in defense spending that came at the expense of domestic programs. Although change was expected with the election of former president Joe Biden, he stated that he would not decrease spending during his time in office.
 
 Biden kept his promise, increasing the Department of Defense spending by 5.4% between 2020 and 2024.
 
-**the chart is too tall, cut by 50%**
-
-<iframe src="https://flo.uri.sh/visualisation/29243692/embed" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:600px;" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
+<iframe src="https://flo.uri.sh/visualisation/29243692/embed" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:300px;" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
 
 </iframe>
 
+Across the country **lead in to Biden increased spending**
+
+\<iframe title="Department of Defense spending in 2020 and 2024" aria-label="Choropleth map" id="datawrapper-chart-teGUa" src="https://datawrapper.dwcdn.net/teGUa/15/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1"\>\</iframe\>\<script type="text/javascript"\>(function(){function e(){window.addEventListener(\`message\`,function(e){if(e.data\[\`datawrapper-height\`\]!==void 0){var t=document.querySelectorAll(\`iframe\`);for(var n in e.data\[\`datawrapper-height\`\])for(var r=0,i;i=t\[r\];r++)if(i.contentWindow===e.source){var a=e.data\[\`datawrapper-height\`\]\[n\]+\`px\`;i.style.height=a}}})}e()})();\</script\>
+
+```{=html}
+<script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+```
 But under the Biden administration, Lockheed Martin — the defense contractor that was awarded the most money from the government in 2020 and 2024 —  received less than half of what it was awarded under the Trump administration. 
 
 ```{r include=FALSE}
@@ -74,7 +78,8 @@ top10_2020 <- data$results %>%
     uei,
     obligations = amount
   ) %>%
-  arrange(desc(obligations))
+  arrange(desc(obligations)) %>% 
+  rename(obligations_2020 = obligations)
 body <- list(
   filters = list(
     time_period = list(
@@ -112,10 +117,16 @@ top10_2024 <- data$results %>%
     uei,
     obligations = amount
   ) %>%
-  arrange(desc(obligations))
+  arrange(desc(obligations)) %>% 
+  rename(obligations_2024 = obligations)
 ```
 
-**Let's fix these tables. Get one table, and have the years side by side and the difference in spending as the fourth column. get rid of "uei" column**
+```{r include=FALSE}
+updated_defense <- top10_2020 %>%
+  left_join(top10_2024, by="uei")
+```
+
+**Let's fix these tables. Get one table, and have the years side by side and the difference in spending as the fourth column. get rid of "uei" column - need to ask for help with this.**
 
 ### 2020
 
@@ -133,13 +144,15 @@ This story will analyze the difference in defense contract spending by the first
 
 ## Modern day Relevance
 
-In April **2026?(specify years since trump previously was referenced in the first term)**, the AP reported that Trump wanted to increase defense spending to \$1.5 trillion, around a 44% increase. This expansion is at the expense at domestic programs, which will experience a 10% cut. Trump has justified this spending due to the continued conflict with Iran, and need for security against global threats. To understand this, it is important to understand how defense spending has been ramping up since Trump's first time in office, and something that was continued by Biden. This indicates bipartisan support for defense spending, a preference that would be interesting to compare to the broader American population.
+In April 2026, the AP reported that Trump wanted to increase defense spending to \$1.5 trillion, around a 44% increase. This expansion is at the expense at domestic programs, which will experience a 10% cut. Trump has justified this spending due to the continued conflict with Iran, and need for security against global threats. To understand this, it is important to understand how defense spending has been ramping up since Trump's first time in office, and something that was continued by Biden. This indicates bipartisan support for defense spending, a preference that would be interesting to compare to the broader American population.
 
 ## Company analysis
 
 The company that I am mainly focusing on in this project is Lockheed Martin. It has 123,000 employees as of December 31, 2025. **describe 2025 net income and revenues** The four business segments that Lockheed Martin works in is aeronautics, missiles and fire control, rotary and mission systems and space. The CEO is named Jim Taiclet.**(caption needed and photo credit)**
 
 ![](images/lockheed.jpg){fig-align="center" width="216"}
+
+Jim Taiclet has been the Lockheed Martin CEO since 2020. (Lockheed Martin)
 
 ## Target Audience
 
@@ -166,7 +179,6 @@ Because I am going to look at where the funding for the defense contractors are 
 ```{=html}
 <script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
 ```
-
 ## Interesting aspects of the story
 
 Although I have had limited time with the data I pulled, I was already able to see the differences in spending between the Trump and Biden administration. I think that the fact that multiple child corporations of Lockheed Martin show up in the top ten highest obligations indicates that there are only a couple of defense contractors that hold a large amount of power in the US. I also thought it was interesting that one of the only contractors that received more money under the Biden administration was the organization dedicated to defense healthcare. This shows a difference in priorities between the two administrations.
