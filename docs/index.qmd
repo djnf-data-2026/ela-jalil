@@ -123,21 +123,13 @@ top10_2024 <- data$results %>%
 
 ```{r include=FALSE}
 updated_defense <- top10_2020 %>%
-  left_join(top10_2024, by="uei")
+  inner_join(top10_2024, by="uei") %>% 
+  select(-contractor.y) %>% 
+  select(-uei)
 ```
 
-**Let's fix these tables. Get one table, and have the years side by side and the difference in spending as the fourth column. get rid of "uei" column - need to ask for help with this.**
-
-### 2020
-
 ```{r echo=FALSE}
-print(top10_2020)
-```
-
-### 2024
-
-```{r echo=FALSE}
-print(top10_2024)
+print(updated_defense)
 ```
 
 This story will analyze the difference in defense contract spending by the first term Trump administration and the Biden administration. In this pitch I will identify the ten defense contractors that received the most money from each administration, and analyze the differences between the two. I will then look at the distribution of obligations across the country, and compare this to the overall Department of Defense spending. I will also look closer into the products that the defense companies are making.
@@ -168,17 +160,6 @@ My audience would be Americans that care about how the government is allocating 
 
 Because I am going to look at where the funding for the defense contractors are going to be allocated by state and county, I will be able to see the impact that defense contractors have in local communities. Beyond the bipartisan separation on defense spending, it would also be interesting to see if there would be any impacts on jobs when defense spending is cut.
 
-**MOVE THESE MAPS TO THE TOP**
-
-**Need to fix the 2020 button on the 2024 map. when i select it, datawrapper renders with a login page and screws up the presentation**
-
-<iframe title="Department of Defense spending in 2020 and 2024" aria-label="Choropleth map" id="datawrapper-chart-rzM1T" src="https://datawrapper.dwcdn.net/rzM1T/6/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height data-external="1">
-
-</iframe>
-
-```{=html}
-<script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
-```
 ## Interesting aspects of the story
 
 Although I have had limited time with the data I pulled, I was already able to see the differences in spending between the Trump and Biden administration. I think that the fact that multiple child corporations of Lockheed Martin show up in the top ten highest obligations indicates that there are only a couple of defense contractors that hold a large amount of power in the US. I also thought it was interesting that one of the only contractors that received more money under the Biden administration was the organization dedicated to defense healthcare. This shows a difference in priorities between the two administrations.
