@@ -1,5 +1,4 @@
 ---
-title: "Final Draft of Story Pitch"
 author: "Ela Jalil"
 toc: true
 date: "6-03-2026"
@@ -10,8 +9,7 @@ format:
 
 # Black Hawks, tanks and submarines, oh my!
 
-![](images/djnf.png)
-[<span style="font-size: 12px;">A compilation of defense contractor products. Image created by Ela Jalil.</span>]
+![](images/djnf.png) \[[A compilation of defense contractor products. Image created by Ela Jalil.]{style="font-size: 12px;"}\]
 
 ### Defense spending grew under Biden, but spending towards the top ten defense contractors did not.
 
@@ -27,15 +25,13 @@ Biden kept his promise, increasing the Department of Defense spending by 5.4% be
 
 Across the country **lead in to Biden increased spending**
 
-\<iframe title="Department of Defense spending in 2020 and 2024" aria-label="Choropleth map" id="datawrapper-chart-teGUa" src="https://datawrapper.dwcdn.net/teGUa/15/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1"\>\</iframe\>\<script type="text/javascript"\>(function(){function e(){window.addEventListener(\`message\`,function(e){if(e.data\[\`datawrapper-height\`\]!==void 0){var t=document.querySelectorAll(\`iframe\`);for(var n in e.data\[\`datawrapper-height\`\])for(var r=0,i;i=t\[r\];r++)if(i.contentWindow===e.source){var a=e.data\[\`datawrapper-height\`\]\[n\]+\`px\`;i.style.height=a}}})}e()})();\</script\>
+<iframe title="Department of Defense spending by state in 2020 and 2024" aria-label="Choropleth map" id="datawrapper-chart-rzM1T" src="https://datawrapper.dwcdn.net/rzM1T/13/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
 
-```{=html}
-<script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
-```
 But under the Biden administration, Lockheed Martin — the defense contractor that was awarded the most money from the government in 2020 and 2024 —  received less than half of what it was awarded under the Trump administration. 
 
 ```{r}
 #| code-fold: true
+#| code-summary: "Code"
 library(httr)
 library(jsonlite)
 library(dplyr)
@@ -123,6 +119,7 @@ top10_2024 <- data$results %>%
 
 ```{r}
 #| code-fold: true
+#| code-summary: "Code"
 updated_defense <- top10_2020 %>%
   inner_join(top10_2024, by="uei") %>% 
   select(-contractor.y) %>% 
@@ -132,7 +129,25 @@ updated_defense <- top10_2020 %>%
 
 ```{r echo=FALSE}
 print(updated_defense)
+#write.csv()
 ```
+
+::: {.callout-note collapse="true"}
+## Company Descriptions
+
+| Company                            | Industry Type | Profit(per most recent quarterly report) | Key Products |
+|-----------------------|-----------------|----------------:|-----------------|
+| **Lockheed Martin Corporation**    |               |                          \$1.488 billion |              |
+| **Electric Boat Corporation**      |               |                                          |              |
+| **The Boeing Company**             |               |                                          |              |
+| **Raytheon Company**               |               |                                          |              |
+| **Humana Government Business Inc** |               |                                          |              |
+|                                    |               |                                          |              |
+|                                    |               |                                          |              |
+|                                    |               |                                          |              |
+|                                    |               |                                          |              |
+|                                    |               |                                          |              |
+:::
 
 This story will analyze the difference in defense contract spending by the first term Trump administration and the Biden administration. In this pitch I will identify the ten defense contractors that received the most money from each administration, and analyze the differences between the two. I will then look at the distribution of obligations across the country, and compare this to the overall Department of Defense spending. I will also look closer into the products that the defense companies are making.
 
@@ -146,8 +161,7 @@ The company that I am mainly focusing on in this project is Lockheed Martin. It 
 
 ![](images/lockheed.jpg){fig-align="center" width="216"}
 
-[<span style="font-size: 12px;">A compilation of defense contractor products. Image created by Ela Jalil. (Lockheed Martin)</span>]
-## Target Audience
+\[[A compilation of defense contractor products. Image created by Ela Jalil. (Lockheed Martin)]{style="font-size: 12px;"}\] \## Target Audience
 
 My audience would be Americans that care about how the government is allocating defense spending.
 
