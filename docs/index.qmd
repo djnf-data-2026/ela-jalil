@@ -19,7 +19,7 @@ On the campaign trail for his first term in office, president Donald Trump promi
 
 Biden kept his promise, increasing the Department of Defense spending by 5.4% between 2020 and 2024.
 
-<iframe src="https://flo.uri.sh/visualisation/29243692/embed" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:300px;" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
+<iframe src="https://flo.uri.sh/visualisation/29243692/embed" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:375px;" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
 
 </iframe>
 
