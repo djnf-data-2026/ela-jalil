@@ -38,6 +38,7 @@ But under the Biden administration, Lockheed Martin — the defense contractor t
 library(httr)
 library(jsonlite)
 library(dplyr)
+library(gt)
 ```
 
 ```{r}
@@ -126,25 +127,22 @@ top10_2024 <- data$results %>%
 #AI was utilized in this coding process
 ```
 
-```{r}
-##| code-fold: true
-##| code-summary: "Code"
+```{r include=FALSE}
 updated_defense <- top10_2020 %>%
   inner_join(top10_2024, by="uei") %>% 
   select(-contractor.y) %>% 
   select(-uei) %>% 
   mutate(spending_difference = (obligations_2020-obligations_2024)) %>% 
   rename(contractor = contractor.x)
-write.csv(updated_defense,"~/Downloads/updated_defense.csv", row.names = FALSE)
 ```
 
 ```{r echo=FALSE}
-library(gt)
 updated_defense %>%
   head() %>%
   gt() %>%
   tab_header(title = "Top defense contractors between 2020 and 2024")
 ```
+I analyzed how spending changed between the last year of Trump's presidency (2020) and the last year of Biden's (2024). The two contractors that grew under Biden were Raytheon and Humana. 
 
 <iframe title="Difference in spending for top defense contractors" aria-label="Grouped Bars" id="datawrapper-chart-ZOu9W" src="https://datawrapper.dwcdn.net/ZOu9W/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height data-external="1">
 
