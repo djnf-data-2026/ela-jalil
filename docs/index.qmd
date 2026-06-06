@@ -9,9 +9,9 @@ format:
 
 # Black Hawks, tanks and submarines, oh my!
 
-![](images/djnf.png) \[[A compilation of defense contractor products. Image created by Ela Jalil.]{style="font-size: 12px;"}\]
+![](images/djnf.png) [A compilation of defense contractor products. Image created by Ela Jalil.]{style="font-size: 12px;"}
 
-### Defense spending grew under Biden, but spending towards the top ten defense contractors did not.
+### Defense spending grew under Biden, but top defense contractors received less money.
 
 ## [What's going on?]{.underline}
 
@@ -25,13 +25,19 @@ Biden kept his promise, increasing the Department of Defense spending by 5.4% be
 
 Across the country **lead in to Biden increased spending**
 
-<iframe title="Department of Defense spending by state in 2020 and 2024" aria-label="Choropleth map" id="datawrapper-chart-rzM1T" src="https://datawrapper.dwcdn.net/rzM1T/13/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+<iframe title="Department of Defense spending by state in 2020 and 2024" aria-label="Choropleth map" id="datawrapper-chart-rzM1T" src="https://datawrapper.dwcdn.net/rzM1T/13/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height data-external="1">
 
+</iframe>
+
+```{=html}
+<script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+```
 But under the Biden administration, Lockheed Martin — the defense contractor that was awarded the most money from the government in 2020 and 2024 —  received less than half of what it was awarded under the Trump administration. 
 
 ```{r}
 #| code-fold: true
 #| code-summary: "Code"
+
 library(httr)
 library(jsonlite)
 library(dplyr)
@@ -137,23 +143,52 @@ updated_defense %>%
   tab_header(title = "Top defense contractors between 2020 and 2024")
 ```
 
-<iframe title="Difference in spending for top defense contractors" aria-label="Grouped Bars" id="datawrapper-chart-ZOu9W" src="https://datawrapper.dwcdn.net/ZOu9W/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
-::: {.callout-note collapse="true"}
+<iframe title="Difference in spending for top defense contractors" aria-label="Grouped Bars" id="datawrapper-chart-ZOu9W" src="https://datawrapper.dwcdn.net/ZOu9W/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height data-external="1">
+
+</iframe>
+
+```{=html}
+<script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+```
 ## Company Descriptions
 
-| Company                            | Industry Type | Profit(per most recent quarterly report) | Key Products |
-|-----------------------|-----------------|----------------:|-----------------|
-| **Lockheed Martin Corporation**    |               |                          \$1.488 billion |              |
-| **Electric Boat Corporation**      |               |                                          |              |
-| **The Boeing Company**             |               |                                          |              |
-| **Raytheon Company**               |               |                                          |              |
-| **Humana Government Business Inc** |               |                                          |              |
-|                                    |               |                                          |              |
-|                                    |               |                                          |              |
-|                                    |               |                                          |              |
-|                                    |               |                                          |              |
-|                                    |               |                                          |              |
-:::
++------------------------------------+---------------------------------+------------------------------------------+--------------------------------------------------+
+| Company                            | Business Segments               | Profit(per most recent quarterly report) | Key Products                                     |
++====================================+=================================+=========================================:+==================================================+
+| **Lockheed Martin Corporation**    | -   Aeronautics                 | \$5.017 billion                          | -   Military aircraft including the F-35 program |
+|                                    |                                 |                                          |                                                  |
+|                                    | -   Missiles and Fire Control   |                                          | -   Missile defense systems and strike weapons   |
+|                                    |                                 |                                          |                                                  |
+|                                    | -   Rotary and Mission Systems  |                                          | -   Helicopters (Black Hawks) and radar systems  |
+|                                    |                                 |                                          |                                                  |
+|                                    | -   Space                       |                                          |                                                  |
++------------------------------------+---------------------------------+------------------------------------------+--------------------------------------------------+
+| **\*Electric Boat Corporation**    | -   Aerospace                   | \$4.21 billion                           | -   Business jets (Gulfstreams)                  |
+|                                    |                                 |                                          |                                                  |
+|                                    | -   Marine Systems              |                                          | -   Nuclear powered submarines                   |
+|                                    |                                 |                                          |                                                  |
+|                                    | -   Combat Systems              |                                          | -   Combat vehicles                              |
+|                                    |                                 |                                          |                                                  |
+|                                    | -   Technologies                |                                          |                                                  |
++------------------------------------+---------------------------------+------------------------------------------+--------------------------------------------------+
+| **The Boeing Company**             | -   Commercial Airplanes        | \$2.238 billion                          | -   Commercial aircrafts (777)                   |
+|                                    |                                 |                                          |                                                  |
+|                                    | -   Defense, Space & Security   |                                          | -   Military aircraft and weapons systems        |
+|                                    |                                 |                                          |                                                  |
+|                                    | -   Global Services             |                                          | -   Intellectual property                        |
++------------------------------------+---------------------------------+------------------------------------------+--------------------------------------------------+
+| **RTX Corporation**                | -   Collins Aerospace (Collins) | \$7.069 billion                          | -   Commercial, business and military aircraft   |
+|                                    |                                 |                                          |                                                  |
+|                                    | -    Pratt & Whitney            |                                          | -   Air and missile defense                      |
+|                                    |                                 |                                          |                                                  |
+|                                    | -   Raytheon                    |                                          | -   Radar systems                                |
++------------------------------------+---------------------------------+------------------------------------------+--------------------------------------------------+
+| **Humana Government Business Inc** | -   Insurance                   | \$1.188 billion                          | -   Health care services                         |
+|                                    |                                 |                                          |                                                  |
+|                                    | -   CenterWell                  |                                          |                                                  |
++------------------------------------+---------------------------------+------------------------------------------+--------------------------------------------------+
+
+\*The 10-K used for the Electric Boat Company is from General Dynamics Corporation.
 
 This story will analyze the difference in defense contract spending by the first term Trump administration and the Biden administration. In this pitch I will identify the ten defense contractors that received the most money from each administration, and analyze the differences between the two. I will then look at the distribution of obligations across the country, and compare this to the overall Department of Defense spending. I will also look closer into the products that the defense companies are making.
 
@@ -163,11 +198,13 @@ In April 2026, the AP reported that Trump wanted to increase defense spending to
 
 ## Company analysis
 
-The company that I am mainly focusing on in this project is Lockheed Martin. It has 123,000 employees as of December 31, 2025. **describe 2025 net income and revenues** The four business segments that Lockheed Martin works in is aeronautics, missiles and fire control, rotary and mission systems and space. The CEO is named Jim Taiclet.**(caption needed and photo credit)**
+The company that I am mainly focusing on in this project is Lockheed Martin. It has 123,000 employees as of December 31, 2025. **describe 2025 net income and revenues** The four business segments that Lockheed Martin works in is aeronautics, missiles and fire control, rotary and mission systems and space. The CEO is named Jim Taiclet.
 
 ![](images/lockheed.jpg){fig-align="center" width="216"}
 
-\[[A compilation of defense contractor products. Image created by Ela Jalil. (Lockheed Martin)]{style="font-size: 12px;"}\] \## Target Audience
+\[[Taiclet was named CEO in 2020. (Lockheed Martin)]{style="font-size: 12px;"}\]
+
+### Target Audience
 
 My audience would be Americans that care about how the government is allocating defense spending.
 
