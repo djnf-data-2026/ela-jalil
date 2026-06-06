@@ -15,7 +15,7 @@ format:
 
 ## [What's going on?]{.underline}
 
-Donald Trump’s first presidency introduced an increase in defense spending that came at the expense of domestic programs. Although change was expected with the election of former president Joe Biden, he stated that he would not decrease spending during his time in office.
+On the campaign trail for his first term in office, president Donald Trump promised that he was going to greatly increase [defense spending](https://www.nbcnews.com/politics/2016-election/trump-calls-increased-defense-spending-more-military-might-n644056). Although there was some expectation that Joe Biden would change course, he stated that he would not decrease spending during his [time in office](https://www.theguardian.com/us-news/2022/apr/03/biden-record-defense-budget-progressive-spending-priorities). 
 
 Biden kept his promise, increasing the Department of Defense spending by 5.4% between 2020 and 2024.
 
@@ -23,7 +23,7 @@ Biden kept his promise, increasing the Department of Defense spending by 5.4% be
 
 </iframe>
 
-Across the country **lead in to Biden increased spending**
+Biden increased DOD spending across 78.3% of U.S. states and territories. The state that received the greatest cut during his time in office was Texas.
 
 <iframe title="Department of Defense spending by state in 2020 and 2024" aria-label="Choropleth map" id="datawrapper-chart-rzM1T" src="https://datawrapper.dwcdn.net/rzM1T/13/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height data-external="1">
 
@@ -34,13 +34,15 @@ Across the country **lead in to Biden increased spending**
 ```
 But under the Biden administration, Lockheed Martin — the defense contractor that was awarded the most money from the government in 2020 and 2024 —  received less than half of what it was awarded under the Trump administration. 
 
-```{r}
-#| code-fold: true
-#| code-summary: "Code"
-
+```{r include=FALSE}
 library(httr)
 library(jsonlite)
 library(dplyr)
+```
+
+```{r}
+#| code-fold: true
+#| code-summary: "Code"
 
 
 body <- list(
