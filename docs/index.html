@@ -95,11 +95,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#potential-impact" id="toc-potential-impact" class="nav-link" data-scroll-target="#potential-impact">Potential impact</a></li>
   <li><a href="#interesting-aspects-of-the-story" id="toc-interesting-aspects-of-the-story" class="nav-link" data-scroll-target="#interesting-aspects-of-the-story">Interesting aspects of the story</a></li>
   <li><a href="#previous-coverage" id="toc-previous-coverage" class="nav-link" data-scroll-target="#previous-coverage">Previous coverage</a></li>
-  <li><a href="#previous-aspects-of-the-pitch" id="toc-previous-aspects-of-the-pitch" class="nav-link" data-scroll-target="#previous-aspects-of-the-pitch">Previous aspects of the pitch</a>
-  <ul class="collapse">
-  <li><a href="#visuals" id="toc-visuals" class="nav-link" data-scroll-target="#visuals">Visuals</a></li>
-  <li><a href="#more-information" id="toc-more-information" class="nav-link" data-scroll-target="#more-information">More information</a></li>
-  </ul></li>
+  <li><a href="#more-information-and-future-reporting" id="toc-more-information-and-future-reporting" class="nav-link" data-scroll-target="#more-information-and-future-reporting">More information and future reporting</a></li>
+  <li><a href="#expected-deliverable-date" id="toc-expected-deliverable-date" class="nav-link" data-scroll-target="#expected-deliverable-date">Expected deliverable date</a></li>
   <li><a href="#contact-me" id="toc-contact-me" class="nav-link" data-scroll-target="#contact-me">Contact me:</a></li>
   </ul></li>
   </ul>
@@ -145,15 +142,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="whats-going-on" class="level2">
 <h2 class="anchored" data-anchor-id="whats-going-on"><u>What’s going on?</u></h2>
-<p>On the campaign trail for his first term in office, president Donald Trump promised that he was going to greatly increase <a href="https://www.nbcnews.com/politics/2016-election/trump-calls-increased-defense-spending-more-military-might-n644056">defense spending</a>. Although there was some expectation that Joe Biden would change course, he stated that he would not decrease spending during his <a href="https://www.theguardian.com/us-news/2022/apr/03/biden-record-defense-budget-progressive-spending-priorities">time in office</a>.&nbsp;</p>
+<p>On the campaign trail for his first term in office, president Donald Trump promised that he would greatly increase <a href="https://www.nbcnews.com/politics/2016-election/trump-calls-increased-defense-spending-more-military-might-n644056">defense spending</a>. Although there was some expectation that Joe Biden would change course, he stated that he would not decrease spending during his <a href="https://www.theguardian.com/us-news/2022/apr/03/biden-record-defense-budget-progressive-spending-priorities">time in office</a>.&nbsp;</p>
 <p>Biden kept his promise, increasing the Department of Defense spending by 5.4% between 2020 and 2024.</p>
 <iframe src="https://flo.uri.sh/visualisation/29243692/embed" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:300px;" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
 </iframe>
-<p>Biden increased DOD spending across 78.3% of U.S. states and territories. The state that received the greatest cut during his time in office was Texas.</p>
+<p>Biden increased DOD spending across 78.3% of U.S. states and territories. The state that received the greatest cut during his time in office was Texas. In the map below I filtered USA Spending data for the Department of Defense, and sorted by both year and state.</p>
 <iframe title="Department of Defense spending by state in 2020 and 2024" aria-label="Choropleth map" id="datawrapper-chart-rzM1T" src="https://datawrapper.dwcdn.net/rzM1T/13/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1">
 </iframe>
 <script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
-<p>But under the Biden administration, Lockheed Martin — the defense contractor that was awarded the most money from the government in 2020 and 2024 —&nbsp; received less than half of what it was awarded under the Trump administration.&nbsp;</p>
+<p>But under the Biden administration, Lockheed Martin — the defense contractor that was awarded the most money from the government in 2020 and 2024 —&nbsp; received less than half of what it was awarded under the Trump administration.&nbsp; I used an API call to gather data for 2020 and 2024, and sorted the recipient data to only include the top ten contractors to the Department of Defense.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -234,7 +231,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>    <span class="at">obligations =</span> amount</span>
 <span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
 <span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(obligations)) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">obligations_2024 =</span> obligations)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">obligations_2024 =</span> obligations)</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="co">#AI was utilized in this coding process</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
@@ -253,23 +251,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>Warning: package 'gt' was built under R version 4.4.3</code></pre>
 </div>
 <div class="cell-output-display">
-<div id="srplfzruqp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#srplfzruqp table {
+<div id="afddtlstzq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#afddtlstzq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#srplfzruqp thead, #srplfzruqp tbody, #srplfzruqp tfoot, #srplfzruqp tr, #srplfzruqp td, #srplfzruqp th {
+#afddtlstzq thead, #afddtlstzq tbody, #afddtlstzq tfoot, #afddtlstzq tr, #afddtlstzq td, #afddtlstzq th {
   border-style: none;
 }
 
-#srplfzruqp p {
+#afddtlstzq p {
   margin: 0;
   padding: 0;
 }
 
-#srplfzruqp .gt_table {
+#afddtlstzq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -295,12 +293,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#srplfzruqp .gt_caption {
+#afddtlstzq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#srplfzruqp .gt_title {
+#afddtlstzq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -312,7 +310,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#srplfzruqp .gt_subtitle {
+#afddtlstzq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -324,7 +322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#srplfzruqp .gt_heading {
+#afddtlstzq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -336,13 +334,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#srplfzruqp .gt_bottom_border {
+#afddtlstzq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#srplfzruqp .gt_col_headings {
+#afddtlstzq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -357,7 +355,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#srplfzruqp .gt_col_heading {
+#afddtlstzq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -377,7 +375,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#srplfzruqp .gt_column_spanner_outer {
+#afddtlstzq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -389,15 +387,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#srplfzruqp .gt_column_spanner_outer:first-child {
+#afddtlstzq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#srplfzruqp .gt_column_spanner_outer:last-child {
+#afddtlstzq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#srplfzruqp .gt_column_spanner {
+#afddtlstzq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -409,11 +407,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#srplfzruqp .gt_spanner_row {
+#afddtlstzq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#srplfzruqp .gt_group_heading {
+#afddtlstzq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -439,7 +437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#srplfzruqp .gt_empty_group_heading {
+#afddtlstzq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -454,15 +452,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#srplfzruqp .gt_from_md > :first-child {
+#afddtlstzq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#srplfzruqp .gt_from_md > :last-child {
+#afddtlstzq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#srplfzruqp .gt_row {
+#afddtlstzq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -481,7 +479,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#srplfzruqp .gt_stub {
+#afddtlstzq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -494,7 +492,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#srplfzruqp .gt_stub_row_group {
+#afddtlstzq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -508,15 +506,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#srplfzruqp .gt_row_group_first td {
+#afddtlstzq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#srplfzruqp .gt_row_group_first th {
+#afddtlstzq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#srplfzruqp .gt_summary_row {
+#afddtlstzq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -526,16 +524,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#srplfzruqp .gt_first_summary_row {
+#afddtlstzq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#srplfzruqp .gt_first_summary_row.thick {
+#afddtlstzq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#srplfzruqp .gt_last_summary_row {
+#afddtlstzq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -545,7 +543,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#srplfzruqp .gt_grand_summary_row {
+#afddtlstzq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -555,7 +553,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#srplfzruqp .gt_first_grand_summary_row {
+#afddtlstzq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -565,7 +563,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#srplfzruqp .gt_last_grand_summary_row_top {
+#afddtlstzq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -575,11 +573,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#srplfzruqp .gt_striped {
+#afddtlstzq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#srplfzruqp .gt_table_body {
+#afddtlstzq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -588,7 +586,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#srplfzruqp .gt_footnotes {
+#afddtlstzq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -602,7 +600,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#srplfzruqp .gt_footnote {
+#afddtlstzq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -611,7 +609,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#srplfzruqp .gt_sourcenotes {
+#afddtlstzq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -625,7 +623,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#srplfzruqp .gt_sourcenote {
+#afddtlstzq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -633,72 +631,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#srplfzruqp .gt_left {
+#afddtlstzq .gt_left {
   text-align: left;
 }
 
-#srplfzruqp .gt_center {
+#afddtlstzq .gt_center {
   text-align: center;
 }
 
-#srplfzruqp .gt_right {
+#afddtlstzq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#srplfzruqp .gt_font_normal {
+#afddtlstzq .gt_font_normal {
   font-weight: normal;
 }
 
-#srplfzruqp .gt_font_bold {
+#afddtlstzq .gt_font_bold {
   font-weight: bold;
 }
 
-#srplfzruqp .gt_font_italic {
+#afddtlstzq .gt_font_italic {
   font-style: italic;
 }
 
-#srplfzruqp .gt_super {
+#afddtlstzq .gt_super {
   font-size: 65%;
 }
 
-#srplfzruqp .gt_footnote_marks {
+#afddtlstzq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#srplfzruqp .gt_asterisk {
+#afddtlstzq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#srplfzruqp .gt_indent_1 {
+#afddtlstzq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#srplfzruqp .gt_indent_2 {
+#afddtlstzq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#srplfzruqp .gt_indent_3 {
+#afddtlstzq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#srplfzruqp .gt_indent_4 {
+#afddtlstzq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#srplfzruqp .gt_indent_5 {
+#afddtlstzq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#srplfzruqp .katex-display {
+#afddtlstzq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#srplfzruqp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#afddtlstzq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -852,17 +850,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p>*The 10-K used for the Electric Boat Company is from General Dynamics Corporation.</p>
+<p>These top defense contractors spend their awarded money across the United States, with Texas being the main recipient in 2020 with $49,467,316,413 spent. This hierarchical chart shows where defense contractors spent the greatest amount of money per state.</p>
 <iframe src="https://flo.uri.sh/visualisation/29271999/embed" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:600px;" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
 </iframe>
-<p>This story will analyze the difference in defense contract spending by the first term Trump administration and the Biden administration. In this pitch I will identify the ten defense contractors that received the most money from each administration, and analyze the differences between the two. I will then look at the distribution of obligations across the country, and compare this to the overall Department of Defense spending. I will also look closer into the products that the defense companies are making.</p>
 </section>
 <section id="modern-day-relevance" class="level2">
 <h2 class="anchored" data-anchor-id="modern-day-relevance">Modern day Relevance</h2>
-<p>In April 2026, the AP reported that Trump wanted to increase defense spending to $1.5 trillion, around a 44% increase. This expansion is at the expense at domestic programs, which will experience a 10% cut. Trump has justified this spending due to the continued conflict with Iran, and need for security against global threats. To understand this, it is important to understand how defense spending has been ramping up since Trump’s first time in office, and something that was continued by Biden. This indicates bipartisan support for defense spending, a preference that would be interesting to compare to the broader American population.</p>
+<p>In April 2026, <a href="https://apnews.com/article/trump-2027-annual-budget-congress-defense-f95715d838be17afd9799208cd3182e3">the AP</a> reported that Trump wanted to increase defense spending to $1.5 trillion, around a 44% increase. This expansion is at the expense at domestic programs, which will experience a 10% cut. Trump has justified this spending due to the continued conflict with Iran, and need for security against global threats. To understand this, it is important to understand how defense spending has been ramping up since Trump’s first time in office, and something that was continued by Biden. This indicates bipartisan support for defense spending, a preference that would be interesting to compare to the broader American population.</p>
 </section>
 <section id="company-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="company-analysis">Company analysis</h2>
-<p>The company that I am mainly focusing on in this project is Lockheed Martin. It has 123,000 employees as of December 31, 2025. <strong>describe 2025 net income and revenues</strong> The four business segments that Lockheed Martin works in is aeronautics, missiles and fire control, rotary and mission systems and space. The CEO is named Jim Taiclet.</p>
+<p>The company that I am mainly focusing on in this project is Lockheed Martin. It has 123,000 employees as of December 31, 2025. According to the most recent 10-K, Lockheed Martin had a profit of $5.017 billion, with a key revenue source coming from the F-35 program. The four business segments that Lockheed Martin works in is aeronautics, missiles and fire control, rotary and mission systems and space. The CEO is named Jim Taiclet, a former U.S. airforce pilot.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/lockheed.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="216"></p>
@@ -871,7 +869,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>[<span style="font-size: 12px;">Taiclet was named CEO in 2020. (Lockheed Martin)</span>]</p>
 <section id="target-audience" class="level3">
 <h3 class="anchored" data-anchor-id="target-audience">Target Audience</h3>
-<p>My audience would be Americans that care about how the government is allocating defense spending.</p>
+<p>My audience would be Americans that care about how the government is allocating defense spending. Due to current global conflict, many readers are likely becoming cognizant of how much money is allocated to defense.</p>
 </section>
 </section>
 <section id="people-i-would-interview" class="level2">
@@ -884,27 +882,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="potential-impact" class="level2">
 <h2 class="anchored" data-anchor-id="potential-impact">Potential impact</h2>
-<p>Because I am going to look at where the funding for the defense contractors are going to be allocated by state and county, I will be able to see the impact that defense contractors have in local communities. Beyond the bipartisan separation on defense spending, it would also be interesting to see if there would be any impacts on jobs when defense spending is cut.</p>
+<p>Because I looked at where defense contractors spend their money by state, I will be able to see the impact that defense contractors have in local communities. Beyond the bipartisan separation on defense spending, it would also be interesting to see if there would be any impacts on jobs when defense spending is cut. I also think it is important for Americans to understand how defense spending is allocated, especially because increases in defense spending often comes at the expense of domestic programs.</p>
 </section>
 <section id="interesting-aspects-of-the-story" class="level2">
 <h2 class="anchored" data-anchor-id="interesting-aspects-of-the-story">Interesting aspects of the story</h2>
-<p>Although I have had limited time with the data I pulled, I was already able to see the differences in spending between the Trump and Biden administration. I think that the fact that multiple child corporations of Lockheed Martin show up in the top ten highest obligations indicates that there are only a couple of defense contractors that hold a large amount of power in the US. I also thought it was interesting that one of the only contractors that received more money under the Biden administration was the organization dedicated to defense healthcare. This shows a difference in priorities between the two administrations.</p>
+<p>The fact that multiple child corporations of Lockheed Martin show up in the top ten highest obligations indicates that there are only a couple of defense contractors that hold a large amount of power in the US. I also thought it was interesting that one of the only contractors that received more money under the Biden administration was the organization dedicated to defense healthcare. This shows a difference in priorities between the two administrations. I also saw that Texas is a power player in the defense industry, and think it would be interesting to do a deeper dive into the economy of the state.</p>
 </section>
 <section id="previous-coverage" class="level2">
 <h2 class="anchored" data-anchor-id="previous-coverage">Previous coverage</h2>
 <p>I noticed that a lot of the previous coverage of the story compared the similarity in spending between the final year of the Trump administration and the first year of the Biden administration. I think that it would be also interesting to cover the difference between 2020 and 2021, but also 2021 and 2024 to see if Biden evolved on his defense spending throughout his tenure in office.</p>
 </section>
-<section id="previous-aspects-of-the-pitch" class="level2">
-<h2 class="anchored" data-anchor-id="previous-aspects-of-the-pitch">Previous aspects of the pitch</h2>
-<section id="visuals" class="level3">
-<h3 class="anchored" data-anchor-id="visuals">Visuals</h3>
-<p>I am planning on looking at each defense company over each year of the presidency, so I will be doing a line chart for those. I also plan on doing a bar chart which lists the amount of money given to each defense company. When I do a state analysis I plan on creating a map.</p>
+<section id="more-information-and-future-reporting" class="level2">
+<h2 class="anchored" data-anchor-id="more-information-and-future-reporting">More information and future reporting</h2>
+<p>I would still like to produce a county-wide analysis of this data, both on general DOD spending and by contractor. That would provide insight into any specific areas that are hubs for defense contracting, and would also be able to give better opportunities for sourcing. I would also like to expand my hierarchical chart into a more interactive map. I believe that talking to a defense contracting lawyer would be very beneficial to allowing me to further understand this data, and would be necessary before any further analysis is performed.</p>
 </section>
-<section id="more-information" class="level3">
-<h3 class="anchored" data-anchor-id="more-information">More information</h3>
-<p>I still need to complete my state and county analysis, and deeper analysis on each contractor. If I was trying to see if there were lifestyle changes in the counties with increases or decreases in funding, I would look at GDP data by county/state to see if there were any differences.</p>
-<p>Creating an API key that can pull the defense contractors and amount in 2020</p>
-</section>
+<section id="expected-deliverable-date" class="level2">
+<h2 class="anchored" data-anchor-id="expected-deliverable-date">Expected deliverable date</h2>
+<p>I would need two weeks to fully complete my analysis and interview sources for my story.</p>
 </section>
 <section id="contact-me" class="level2">
 <h2 class="anchored" data-anchor-id="contact-me">Contact me:</h2>

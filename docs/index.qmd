@@ -233,15 +233,13 @@ The fact that multiple child corporations of Lockheed Martin show up in the top 
 
 I noticed that a lot of the previous coverage of the story compared the similarity in spending between the final year of the Trump administration and the first year of the Biden administration. I think that it would be also interesting to cover the difference between 2020 and 2021, but also 2021 and 2024 to see if Biden evolved on his defense spending throughout his tenure in office.
 
-### Visuals
+## More information and future reporting 
 
-I am planning on looking at each defense company over each year of the presidency, so I will be doing a line chart for those. I also plan on doing a bar chart which lists the amount of money given to each defense company. When I do a state analysis I plan on creating a map.
+I would still like to produce a county-wide analysis of this data, both on general DOD spending and by contractor. That would provide insight into any specific areas that are hubs for defense contracting, and would also be able to give better opportunities for sourcing. I would also like to expand my hierarchical chart into a more interactive map. I believe that talking to a defense contracting lawyer would be very beneficial to allowing me to further understand this data, and would be necessary before any further analysis is performed.
 
-### More information
+## Expected deliverable date
 
-I still need to complete my state and county analysis, and deeper analysis on each contractor. If I was trying to see if there were lifestyle changes in the counties with increases or decreases in funding, I would look at GDP data by county/state to see if there were any differences.
-
-Creating an API key that can pull the defense contractors and amount in 2020
+I would need two weeks to fully complete my analysis and interview sources for my story.
 
 ## Contact me:
 
