@@ -132,7 +132,7 @@ updated_defense <- top10_2020 %>%
   inner_join(top10_2024, by="uei") %>% 
   select(-contractor.y) %>% 
   select(-uei) %>% 
-  mutate(spending_difference = (obligations_2020-obligations_2024)) %>% 
+  mutate(spending_difference = (obligations_2024-obligations_2020)) %>% 
   rename(contractor = contractor.x)
 ```
 
